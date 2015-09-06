@@ -21,7 +21,7 @@
 }
 
 - (void)initialise {
-    
+    self.view.backgroundColor = [UIColor FNRWhite];
 }
 
 @end

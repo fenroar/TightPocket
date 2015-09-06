@@ -29,8 +29,12 @@ static NSString * const CategoryCellIdentifier = @"CategoryCell";
     self.categories = @[ kCategoryFood,
                          kCategoryTravel,
                          kCategoryEntertainment,
+                         kCategoryGroceries,
+                         kCategoryMedical,
                          kCategoryOther];
     
+    self.tableView.backgroundColor = [UIColor FNRWhite];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
@@ -60,6 +64,7 @@ static NSString * const CategoryCellIdentifier = @"CategoryCell";
 
 - (CategoryTableCell *)categoryCellForIndexPath:(NSIndexPath *)indexPath {
     CategoryTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:CategoryCellIdentifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor FNRWhite];
     NSString *category = [self.categories objectAtIndex:indexPath.row];
     cell.textLabel.text = category;
     return cell;

@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "Expenditure.h"
+#import "NSDate+Extensions.h"
 #import "FNRViewController.h"
 #import "MainViewController.h"
 
@@ -19,7 +21,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [self setAppearance];
+    [self clearOldData];
     MainViewController *initialViewController = (MainViewController *)self.window.rootViewController;
     if ([initialViewController isKindOfClass:[FNRViewController class]]) {
         initialViewController.managedObjectContext = self.managedObjectContext;
@@ -132,6 +135,61 @@
             abort();
         }
     }
+}
+
+#pragma mark - Data management {
+
+- (void)clearOldData {
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Expenditure"];
+    
+    // Delete records that are over a month old
+    NSDate *startOfDate = [NSDate dayWithNoTime:[NSDate date]];
+    NSDate *endOfDate = [NSDate subtractNumberOfDays:31 fromDate:startOfDate];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(entryDate < %@)", endOfDate];
+    [fetchRequest setPredicate:predicate];
+    
+    NSError *error = nil;
+    NSArray *oldExpenditures = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (!error) {
+        for (Expenditure *expenditure in oldExpenditures) {
+            [self.managedObjectContext deleteObject:expenditure];
+        }
+        NSError *deleteError = nil;
+        if ([self.managedObjectContext save:&deleteError] == NO) {
+            NSAssert(NO, @"Save should not fail\n%@", [error localizedDescription]);
+            abort();
+        }
+    } else {
+        NSLog(@"Error fetching old data");
+    }
+}
+
+- (void)setAppearance {
+    UIColor *barTintColor = [UIColor FNRRed];
+    UIColor *barBackgroundColor = [UIColor FNRWhite];
+    UIColor *tabBarTintColor = [UIColor FNRRed];
+    UIColor *tabBarBackgroundColor = [UIColor FNRWhite];
+    
+    NSDictionary *titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor],
+                                           NSFontAttributeName : [UIFont systemFontOfSize:17.0f] };
+    
+    [[UINavigationBar appearance] setBarTintColor:barBackgroundColor];
+    [[UINavigationBar appearance] setTintColor:barTintColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:titleTextAttributes];
+    [[UINavigationBar appearance] setTranslucent:NO];
+    
+    [[UIToolbar appearance] setBarTintColor:barBackgroundColor];
+    [[UIToolbar appearance] setTintColor:barTintColor];
+    [[UIToolbar appearance] setTranslucent:NO];
+    
+    [[UITabBar appearance] setBarTintColor:tabBarBackgroundColor];
+    [[UITabBar appearance] setTintColor:tabBarTintColor];
+    
+    [[UIButton appearance] setTintColor:barTintColor];
+    [[UIButton appearance] setTitleColor:[UIColor whiteColor]
+                                forState:UIControlStateNormal];
 }
 
 @end

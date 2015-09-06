@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0995DA21B9CFB0F00078235 /* UIImage+ColorOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995D9F1B9CFB0F00078235 /* UIImage+ColorOverlay.m */; };
+		D0995DA31B9CFB0F00078235 /* UIColor+FNR.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */; };
 		D09DEEEE1B98C62D0033BCFF /* Expenditure.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEED1B98C62D0033BCFF /* Expenditure.m */; };
 		D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF01B99C1320033BCFF /* ExpenditureListViewController.m */; };
 		D09DEEF41B99C99B0033BCFF /* ExpenditureTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF31B99C99B0033BCFF /* ExpenditureTableCell.m */; };
@@ -36,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0995D9E1B9CFB0F00078235 /* UIImage+ColorOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ColorOverlay.h"; sourceTree = "<group>"; };
+		D0995D9F1B9CFB0F00078235 /* UIImage+ColorOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ColorOverlay.m"; sourceTree = "<group>"; };
+		D0995DA01B9CFB0F00078235 /* UIColor+FNR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "UIColor+FNR.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIColor+FNR.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		D0995DA41B9CFB7700078235 /* TightPocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TightPocket-Prefix.pch"; sourceTree = "<group>"; };
 		D09DEEEC1B98C62D0033BCFF /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expenditure.h; sourceTree = "<group>"; };
 		D09DEEED1B98C62D0033BCFF /* Expenditure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expenditure.m; sourceTree = "<group>"; };
 		D09DEEEF1B99C1320033BCFF /* ExpenditureListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenditureListViewController.h; sourceTree = "<group>"; };
@@ -91,6 +98,10 @@
 			children = (
 				D0B87C331B976DED00A49B42 /* NSDate+Extensions.h */,
 				D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */,
+				D0995D9E1B9CFB0F00078235 /* UIImage+ColorOverlay.h */,
+				D0995D9F1B9CFB0F00078235 /* UIImage+ColorOverlay.m */,
+				D0995DA01B9CFB0F00078235 /* UIColor+FNR.h */,
+				D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 			children = (
 				D0D5E3761B975A6200EFD403 /* Info.plist */,
 				D0D5E3771B975A6200EFD403 /* main.m */,
+				D0995DA41B9CFB7700078235 /* TightPocket-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -334,9 +346,11 @@
 				D0D5E3B51B975D1C00EFD403 /* FNRViewController.m in Sources */,
 				D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */,
 				D09DEEEE1B98C62D0033BCFF /* Expenditure.m in Sources */,
+				D0995DA21B9CFB0F00078235 /* UIImage+ColorOverlay.m in Sources */,
 				D09DEEF41B99C99B0033BCFF /* ExpenditureTableCell.m in Sources */,
 				D09DEEFA1B99FE7C0033BCFF /* CategoryTableCell.m in Sources */,
 				D0B87C2B1B97699700A49B42 /* AddExpenditureViewController.m in Sources */,
+				D0995DA31B9CFB0F00078235 /* UIColor+FNR.m in Sources */,
 				D0D5E3781B975A6200EFD403 /* main.m in Sources */,
 				D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */,
 			);
@@ -466,6 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "TightPocket/TightPocket-Prefix.pch";
 				INFOPLIST_FILE = TightPocket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREFIX_HEADER = "TightPocket/TightPocket-Prefix.pch";
 				INFOPLIST_FILE = TightPocket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

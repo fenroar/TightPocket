@@ -43,7 +43,6 @@
     
     [self initialiseTextField:self.notesTextField placeholder:@"Notes"];
     
-    
     [self.addButton addTarget:self action:@selector(didPressAddButton) forControlEvents:UIControlEventTouchUpInside];
 }
 
@@ -72,8 +71,9 @@
     [textField setRightView:spacerView];
     
     textField.placeholder = placeholder;
-    textField.layer.borderColor = [UIColor colorWithRed:160/255.0f green:160/255.0f blue:160/255.0f alpha:1.0].CGColor;
+    textField.layer.borderColor = [UIColor FNRDarkGrey].CGColor;
     textField.layer.borderWidth = 1.0f;
+    textField.layer.cornerRadius = 4.0f;
 }
 
 #pragma mark - Actions / Selectors

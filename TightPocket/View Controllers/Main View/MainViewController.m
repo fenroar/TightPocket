@@ -12,10 +12,10 @@
 #import "NSDate+Extensions.h"
 #import "Expenditure.h"
 
-@interface MainViewController () <UIScrollViewDelegate>
+@interface MainViewController ()
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (nonatomic) CGFloat lastContentOffset;
+@property (weak, nonatomic) IBOutlet UIButton *previousDayButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextDayButton;
 
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
 @property (weak, nonatomic) IBOutlet UIButton *listButton;
@@ -36,47 +36,65 @@
     [self updateLabels];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth(self.view.frame), 0) animated:NO];
-}
-
 #pragma mark - UI
 
 - (void)initialise {
     [super initialise];
-    
+    [self initialiseSwipeGesture];
     self.totalBalance = [NSDecimalNumber decimalNumberWithString:@"12345.00"];
     
     self.currentDate = [NSDate today];
     
-    self.scrollView.delegate = self;
-    self.scrollView.bounces = NO;
+    // Date Buttons
+    [self customiseButton:self.previousDayButton
+                withImage:[UIImage imageNamed:@"ic_arrow_left"]];
+    [self.previousDayButton addTarget:self action:@selector(prevDay) forControlEvents:UIControlEventTouchUpInside];
     
+    [self customiseButton:self.nextDayButton
+                withImage:[UIImage imageNamed:@"ic_arrow_right"]];
+    [self.nextDayButton addTarget:self action:@selector(nextDay) forControlEvents:UIControlEventTouchUpInside];
+    
+    // Action Buttons
     [self.addButton addTarget:self action:@selector(didPressAddButton) forControlEvents:UIControlEventTouchUpInside];
     [self.listButton addTarget:self action:@selector(didPressListButton) forControlEvents:UIControlEventTouchUpInside];
     
     [self roundButton:self.addButton
-            withImage:[UIImage imageNamed:@"ic_add"]
-            withColor:[UIColor redColor]];
+            withImage:[UIImage imageNamed:@"ic_add"]];
     
     [self roundButton:self.listButton
-            withImage:[UIImage imageNamed:@"ic_list"]
-            withColor:[UIColor blueColor]];
+            withImage:[UIImage imageNamed:@"ic_list"]];
+}
+
+- (void)customiseButton:(UIButton *)button
+          withImage:(UIImage *)image {
+    [button setTitle:@"" forState:UIControlStateNormal];
+    [button setImage:image
+            forState:UIControlStateNormal];
 }
 
 - (void)roundButton:(UIButton *)button
-          withImage:(UIImage *)image
-          withColor:(UIColor *)backgroundColor {
-    [button setTitle:@"" forState:UIControlStateNormal];
-    [button setImage:image
-                    forState:UIControlStateNormal];
+          withImage:(UIImage *)image {
+    [self customiseButton:button withImage:image];
     button.layer.cornerRadius = CGRectGetHeight(button.frame)/2;
-    button.backgroundColor = backgroundColor;
+    button.layer.borderColor = [UIColor FNRDarkGrey].CGColor;
+    button.layer.borderWidth = 1.0f;
+}
+
+- (void)initialiseSwipeGesture {
+    UISwipeGestureRecognizer *swipeRecognizerLeft = [UISwipeGestureRecognizer new];
+    swipeRecognizerLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [swipeRecognizerLeft addTarget:self action:@selector(didSwipe:)];
+    [self.view addGestureRecognizer:swipeRecognizerLeft];
+    
+    UISwipeGestureRecognizer *swipeRecognizerRight = [UISwipeGestureRecognizer new];
+    swipeRecognizerRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [swipeRecognizerRight addTarget:self action:@selector(didSwipe:)];
+    [self.view addGestureRecognizer:swipeRecognizerRight];
 }
 
 - (void)updateLabels {
     [self updateBalanceLabel];
-    [self updateDateLabel];
+    [self updateDateView];
 }
 
 - (void)updateBalanceLabel {
@@ -104,8 +122,9 @@
     self.balanceLabel.text = [currencyFormatter stringFromNumber:self.totalBalance];
 }
 
-- (void)updateDateLabel {
+- (void)updateDateView {
     self.addButton.hidden = ![self.currentDate isToday];
+    self.nextDayButton.hidden = [self.currentDate isToday];
     if ([self.currentDate isToday]) {
         self.dateLabel.text = @"Today";
         
@@ -117,6 +136,19 @@
 }
 
 #pragma mark - Actions / Selectors
+
+- (void)didSwipe:(UISwipeGestureRecognizer *)gestureRecognizer {
+    switch (gestureRecognizer.direction) {
+        case UISwipeGestureRecognizerDirectionLeft:
+            [self nextDay];
+            break;
+        case UISwipeGestureRecognizerDirectionRight: {
+            [self prevDay];
+        }
+        default:
+            break;
+    }
+}
 
 - (void)didPressAddButton {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -133,48 +165,30 @@
     [self presentViewController:expenditureListVC animated:YES completion:nil];
 }
 
-#pragma mark - UIScrollViewDelegate
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    self.lastContentOffset = scrollView.contentOffset.x;
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    CGPoint originPoint = CGPointMake(CGRectGetWidth(self.view.frame), 0);
-    if (!CGPointEqualToPoint(self.scrollView.contentOffset, originPoint)) {
-        if (self.lastContentOffset < (int)scrollView.contentOffset.x) {
-            NSLog(@"right");
-            NSDate *nextDay = [NSDate addNumberOfDays:1
-                                               toDate:self.currentDate];
-            if ([nextDay isInFuture]) {
-                self.currentDate = [NSDate addNumberOfDays:1
-                                                    toDate:self.currentDate];
-                [self updateLabels];
-            }
-        }
-        else if (self.lastContentOffset > (int)scrollView.contentOffset.x) {
-            NSLog(@"left");
-            self.currentDate = [NSDate subtractNumberOfDays:1
-                                                   fromDate:self.currentDate];
-            [self updateLabels];
-        }
-
-        [self.scrollView setContentOffset:originPoint
-                                 animated:NO];
+- (void)nextDay {
+    NSDate *nextDay = [NSDate addNumberOfDays:1
+                                       toDate:self.currentDate];
+    if ([nextDay isInFuture]) {
+        self.currentDate = nextDay;
+        [self updateLabels];
     }
-}
-
-- (void)scrollViewDidEndDragging:(nonnull UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-    NSLog(@"didEndDragging");
     
-//
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//    });
+    self.previousDayButton.hidden = NO;
 }
 
-- (void)scrollViewDidEndScrollingAnimation:(nonnull UIScrollView *)scrollView {
-    NSLog(@"scrollViewDidEndScrollingAnimation");
-//    NSLog(@"offset: %@", NSStringFromCGPoint(scrollView.contentOffset));
+- (void)prevDay {
+    NSDate *prevDay = [NSDate subtractNumberOfDays:1
+                                           fromDate:self.currentDate];
+    
+    NSDate *lastMonthFromToday = [NSDate dayWithNoTime:[NSDate subtractNumberOfMonths:1
+                                                                             fromDate:[NSDate date]]];
+    if ([prevDay compare:lastMonthFromToday] == NSOrderedDescending ||
+        [prevDay compare:lastMonthFromToday] == NSOrderedSame) {
+        self.currentDate = prevDay;
+        [self updateLabels];
+    }
+    
+    self.previousDayButton.hidden = [prevDay compare:lastMonthFromToday] == NSOrderedSame;
 }
 
 @end

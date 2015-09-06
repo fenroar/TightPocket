@@ -12,6 +12,8 @@
 
 + (NSDate *)dayWithNoTime:(NSDate *)aDate;
 + (NSDate *)today;
++ (NSDate *)subtractNumberOfMonths:(NSInteger)months
+                          fromDate:(NSDate *)aDate;
 + (NSDate *)addNumberOfDays:(NSInteger)numberOfDay
                      toDate:(NSDate *)aDate;
 + (NSDate *)subtractNumberOfDays:(NSInteger)numberOfDay
@@ -19,5 +21,6 @@
 
 - (BOOL)isToday;
 - (BOOL)isInFuture;
+- (BOOL)isInPast;
 
 @end

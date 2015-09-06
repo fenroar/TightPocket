@@ -23,6 +23,16 @@
     return [NSDate dayWithNoTime:[NSDate date]];
 }
 
++ (NSDate *)subtractNumberOfMonths:(NSInteger)months
+                          fromDate:(NSDate *)aDate {
+    
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.month = -1;
+    NSDate *resultingMonth = [[NSCalendar currentCalendar] dateByAddingComponents:components toDate:aDate options:0];
+    
+    return resultingMonth;
+}
+
 + (NSDate *)addNumberOfDays:(NSInteger)numberOfDay
                      toDate:(NSDate *)aDate {
     NSDate *yesterday = [aDate dateByAddingTimeInterval:86400 * (numberOfDay)];
@@ -52,6 +62,10 @@
 
 - (BOOL)isInFuture {
     return ([self compare:[NSDate date]] == NSOrderedAscending);
+}
+
+- (BOOL)isInPast {
+    return ([self compare:[NSDate date]] == NSOrderedDescending);
 }
 
 @end

@@ -27,6 +27,7 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
     [super initialise];
     [self initaliseToolBar];
     
+    self.tableView.backgroundColor = [UIColor FNRWhite];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -64,34 +65,22 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
 
 - (ExpenditureTableCell *)expenditureCellForIndexPath:(NSIndexPath *)indexPath {
     ExpenditureTableCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ExpenditureCellIdentifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor FNRWhite];
     [self configureBasicCell:cell atIndexPath:indexPath];
     return cell;
 }
 
 - (void)configureBasicCell:(ExpenditureTableCell *)cell atIndexPath:(NSIndexPath *)indexPath {
     Expenditure *expenditure = [self.expenditures objectAtIndex:indexPath.row];
-    [self setTitleForCell:cell expenditure:expenditure];
-    [self setSubtitleForCell:cell expenditure:expenditure];
+    [self setTimeForCell:cell expenditure:expenditure];
     [self setAmountForCell:cell expenditure:expenditure];
+    [self setCategoryForCell:cell expenditure:expenditure];
+    [self setNotesForCell:cell expenditure:expenditure];
 }
 
-- (void)setTitleForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
-    NSString *title = (expenditure) ? expenditure.category : NSLocalizedString(@"[No Title]", nil);
-    [cell.titleLabel setText:title];
-}
-
-- (void)setSubtitleForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
-    NSDateFormatter *dateFormatter = [NSDateFormatter new];
-    dateFormatter.dateFormat = [NSString stringWithFormat:@"%@ HH:mm", kExpenditureDateFormat];
-    
-    NSString *subtitle = [dateFormatter stringFromDate:expenditure.entryDate]; //expenditure.entryDate;
-    // Some subtitles can be really long, so only display the
-    // first 200 characters
-    if (subtitle.length > 200) {
-        subtitle = [NSString stringWithFormat:@"%@...", [subtitle substringToIndex:200]];
-    }
-    
-    [cell.subtitleLabel setText:subtitle];
+- (void)setTimeForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
+    NSString *time = [NSDateFormatter localizedStringFromDate:expenditure.entryDate dateStyle:NSDateFormatterNoStyle timeStyle:NSDateFormatterMediumStyle];
+    [cell.timestampLabel setText:time];
 }
 
 - (void)setAmountForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
@@ -100,6 +89,15 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
     NSString *amount = [currencyFormatter stringFromNumber:expenditure.amount];
     
     [cell.amountLabel setText:amount];
+}
+
+- (void)setCategoryForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
+    NSString *category = expenditure.category;
+    [cell.categoryLabel setText:category];
+}
+
+- (void)setNotesForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
+    [cell.notesLabel setText:expenditure.notes];
 }
 
 #pragma mark - UITableViewDelegate / UITableViewDataSource
