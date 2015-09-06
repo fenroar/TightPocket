@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D09DEEEE1B98C62D0033BCFF /* Expenditure.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEED1B98C62D0033BCFF /* Expenditure.m */; };
+		D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF01B99C1320033BCFF /* ExpenditureListViewController.m */; };
+		D09DEEF41B99C99B0033BCFF /* ExpenditureTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF31B99C99B0033BCFF /* ExpenditureTableCell.m */; };
+		D09DEEF71B99FE320033BCFF /* ExpenditureCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF61B99FE320033BCFF /* ExpenditureCategoryViewController.m */; };
+		D09DEEFA1B99FE7C0033BCFF /* CategoryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF91B99FE7C0033BCFF /* CategoryTableCell.m */; };
+		D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C271B975DCA00A49B42 /* MainViewController.m */; };
+		D0B87C2B1B97699700A49B42 /* AddExpenditureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C2A1B97699700A49B42 /* AddExpenditureViewController.m */; };
+		D0B87C351B976DED00A49B42 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */; };
+		D0D5E3781B975A6200EFD403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E3771B975A6200EFD403 /* main.m */; };
+		D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37A1B975A6200EFD403 /* AppDelegate.m */; };
+		D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37C1B975A6200EFD403 /* TightPocket.xcdatamodeld */; };
+		D0D5E3841B975A6200EFD403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D5E3821B975A6200EFD403 /* Main.storyboard */; };
+		D0D5E3861B975A6200EFD403 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D5E3851B975A6200EFD403 /* Images.xcassets */; };
+		D0D5E3891B975A6200EFD403 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D5E3871B975A6200EFD403 /* LaunchScreen.xib */; };
+		D0D5E3951B975A6200EFD403 /* TightPocketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E3941B975A6200EFD403 /* TightPocketTests.m */; };
+		D0D5E3B51B975D1C00EFD403 /* FNRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E3B41B975D1C00EFD403 /* FNRViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0D5E38F1B975A6200EFD403 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0D5E36A1B975A6200EFD403 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0D5E3711B975A6200EFD403;
+			remoteInfo = TightPocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D09DEEEC1B98C62D0033BCFF /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expenditure.h; sourceTree = "<group>"; };
+		D09DEEED1B98C62D0033BCFF /* Expenditure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expenditure.m; sourceTree = "<group>"; };
+		D09DEEEF1B99C1320033BCFF /* ExpenditureListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenditureListViewController.h; sourceTree = "<group>"; };
+		D09DEEF01B99C1320033BCFF /* ExpenditureListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenditureListViewController.m; sourceTree = "<group>"; };
+		D09DEEF21B99C99B0033BCFF /* ExpenditureTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenditureTableCell.h; sourceTree = "<group>"; };
+		D09DEEF31B99C99B0033BCFF /* ExpenditureTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenditureTableCell.m; sourceTree = "<group>"; };
+		D09DEEF51B99FE320033BCFF /* ExpenditureCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenditureCategoryViewController.h; sourceTree = "<group>"; };
+		D09DEEF61B99FE320033BCFF /* ExpenditureCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpenditureCategoryViewController.m; sourceTree = "<group>"; };
+		D09DEEF81B99FE7C0033BCFF /* CategoryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableCell.h; sourceTree = "<group>"; };
+		D09DEEF91B99FE7C0033BCFF /* CategoryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableCell.m; sourceTree = "<group>"; };
+		D0B87C261B975DCA00A49B42 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D0B87C271B975DCA00A49B42 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D0B87C291B97699700A49B42 /* AddExpenditureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddExpenditureViewController.h; sourceTree = "<group>"; };
+		D0B87C2A1B97699700A49B42 /* AddExpenditureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExpenditureViewController.m; sourceTree = "<group>"; };
+		D0B87C331B976DED00A49B42 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
+		D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
+		D0D5E3721B975A6200EFD403 /* TightPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TightPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D5E3761B975A6200EFD403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D5E3771B975A6200EFD403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0D5E3791B975A6200EFD403 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0D5E37A1B975A6200EFD403 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0D5E37D1B975A6200EFD403 /* TightPocket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TightPocket.xcdatamodel; sourceTree = "<group>"; };
+		D0D5E3831B975A6200EFD403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0D5E3851B975A6200EFD403 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D0D5E3881B975A6200EFD403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D0D5E38E1B975A6200EFD403 /* TightPocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TightPocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D5E3931B975A6200EFD403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D5E3941B975A6200EFD403 /* TightPocketTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TightPocketTests.m; sourceTree = "<group>"; };
+		D0D5E3B31B975D1C00EFD403 /* FNRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNRViewController.h; sourceTree = "<group>"; };
+		D0D5E3B41B975D1C00EFD403 /* FNRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNRViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0D5E36F1B975A6200EFD403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5E38B1B975A6200EFD403 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0B87C2C1B976CB400A49B42 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D0B87C331B976DED00A49B42 /* NSDate+Extensions.h */,
+				D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		D0D5E3691B975A6200EFD403 = {
+			isa = PBXGroup;
+			children = (
+				D0D5E3741B975A6200EFD403 /* TightPocket */,
+				D0D5E3911B975A6200EFD403 /* TightPocketTests */,
+				D0D5E3731B975A6200EFD403 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0D5E3731B975A6200EFD403 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5E3721B975A6200EFD403 /* TightPocket.app */,
+				D0D5E38E1B975A6200EFD403 /* TightPocketTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0D5E3741B975A6200EFD403 /* TightPocket */ = {
+			isa = PBXGroup;
+			children = (
+				D0B87C2C1B976CB400A49B42 /* Common */,
+				D0D5E3A91B975CF200EFD403 /* View Controllers */,
+				D09DEEEC1B98C62D0033BCFF /* Expenditure.h */,
+				D09DEEED1B98C62D0033BCFF /* Expenditure.m */,
+				D0D5E3791B975A6200EFD403 /* AppDelegate.h */,
+				D0D5E37A1B975A6200EFD403 /* AppDelegate.m */,
+				D0D5E3821B975A6200EFD403 /* Main.storyboard */,
+				D0D5E3851B975A6200EFD403 /* Images.xcassets */,
+				D0D5E3871B975A6200EFD403 /* LaunchScreen.xib */,
+				D0D5E37C1B975A6200EFD403 /* TightPocket.xcdatamodeld */,
+				D0D5E3751B975A6200EFD403 /* Supporting Files */,
+			);
+			path = TightPocket;
+			sourceTree = "<group>";
+		};
+		D0D5E3751B975A6200EFD403 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5E3761B975A6200EFD403 /* Info.plist */,
+				D0D5E3771B975A6200EFD403 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0D5E3911B975A6200EFD403 /* TightPocketTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5E3941B975A6200EFD403 /* TightPocketTests.m */,
+				D0D5E3921B975A6200EFD403 /* Supporting Files */,
+			);
+			path = TightPocketTests;
+			sourceTree = "<group>";
+		};
+		D0D5E3921B975A6200EFD403 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5E3931B975A6200EFD403 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0D5E3A91B975CF200EFD403 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D0D5E3AA1B975CF200EFD403 /* Add Expenditure */,
+				D0D5E3AB1B975CF200EFD403 /* Expenditures List */,
+				D0D5E3AC1B975CF200EFD403 /* Main View */,
+				D0D5E3AF1B975CF200EFD403 /* Set Amount */,
+				D0D5E3B01B975CF200EFD403 /* Set Category */,
+				D0D5E3B11B975CF200EFD403 /* Set Note */,
+				D0D5E3B31B975D1C00EFD403 /* FNRViewController.h */,
+				D0D5E3B41B975D1C00EFD403 /* FNRViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D0D5E3AA1B975CF200EFD403 /* Add Expenditure */ = {
+			isa = PBXGroup;
+			children = (
+				D0B87C291B97699700A49B42 /* AddExpenditureViewController.h */,
+				D0B87C2A1B97699700A49B42 /* AddExpenditureViewController.m */,
+			);
+			path = "Add Expenditure";
+			sourceTree = "<group>";
+		};
+		D0D5E3AB1B975CF200EFD403 /* Expenditures List */ = {
+			isa = PBXGroup;
+			children = (
+				D09DEEEF1B99C1320033BCFF /* ExpenditureListViewController.h */,
+				D09DEEF01B99C1320033BCFF /* ExpenditureListViewController.m */,
+				D09DEEF21B99C99B0033BCFF /* ExpenditureTableCell.h */,
+				D09DEEF31B99C99B0033BCFF /* ExpenditureTableCell.m */,
+			);
+			path = "Expenditures List";
+			sourceTree = "<group>";
+		};
+		D0D5E3AC1B975CF200EFD403 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				D0B87C261B975DCA00A49B42 /* MainViewController.h */,
+				D0B87C271B975DCA00A49B42 /* MainViewController.m */,
+			);
+			path = "Main View";
+			sourceTree = "<group>";
+		};
+		D0D5E3AF1B975CF200EFD403 /* Set Amount */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Set Amount";
+			sourceTree = "<group>";
+		};
+		D0D5E3B01B975CF200EFD403 /* Set Category */ = {
+			isa = PBXGroup;
+			children = (
+				D09DEEF51B99FE320033BCFF /* ExpenditureCategoryViewController.h */,
+				D09DEEF61B99FE320033BCFF /* ExpenditureCategoryViewController.m */,
+				D09DEEF81B99FE7C0033BCFF /* CategoryTableCell.h */,
+				D09DEEF91B99FE7C0033BCFF /* CategoryTableCell.m */,
+			);
+			path = "Set Category";
+			sourceTree = "<group>";
+		};
+		D0D5E3B11B975CF200EFD403 /* Set Note */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Set Note";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0D5E3711B975A6200EFD403 /* TightPocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D5E3981B975A6200EFD403 /* Build configuration list for PBXNativeTarget "TightPocket" */;
+			buildPhases = (
+				D0D5E36E1B975A6200EFD403 /* Sources */,
+				D0D5E36F1B975A6200EFD403 /* Frameworks */,
+				D0D5E3701B975A6200EFD403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TightPocket;
+			productName = TightPocket;
+			productReference = D0D5E3721B975A6200EFD403 /* TightPocket.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0D5E38D1B975A6200EFD403 /* TightPocketTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0D5E39B1B975A6200EFD403 /* Build configuration list for PBXNativeTarget "TightPocketTests" */;
+			buildPhases = (
+				D0D5E38A1B975A6200EFD403 /* Sources */,
+				D0D5E38B1B975A6200EFD403 /* Frameworks */,
+				D0D5E38C1B975A6200EFD403 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0D5E3901B975A6200EFD403 /* PBXTargetDependency */,
+			);
+			name = TightPocketTests;
+			productName = TightPocketTests;
+			productReference = D0D5E38E1B975A6200EFD403 /* TightPocketTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0D5E36A1B975A6200EFD403 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = fenroar;
+				TargetAttributes = {
+					D0D5E3711B975A6200EFD403 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = GWGTXL8GG9;
+					};
+					D0D5E38D1B975A6200EFD403 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = D0D5E3711B975A6200EFD403;
+					};
+				};
+			};
+			buildConfigurationList = D0D5E36D1B975A6200EFD403 /* Build configuration list for PBXProject "TightPocket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0D5E3691B975A6200EFD403;
+			productRefGroup = D0D5E3731B975A6200EFD403 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0D5E3711B975A6200EFD403 /* TightPocket */,
+				D0D5E38D1B975A6200EFD403 /* TightPocketTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0D5E3701B975A6200EFD403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D5E3841B975A6200EFD403 /* Main.storyboard in Resources */,
+				D0D5E3891B975A6200EFD403 /* LaunchScreen.xib in Resources */,
+				D0D5E3861B975A6200EFD403 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5E38C1B975A6200EFD403 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0D5E36E1B975A6200EFD403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0B87C351B976DED00A49B42 /* NSDate+Extensions.m in Sources */,
+				D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */,
+				D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */,
+				D09DEEF71B99FE320033BCFF /* ExpenditureCategoryViewController.m in Sources */,
+				D0D5E3B51B975D1C00EFD403 /* FNRViewController.m in Sources */,
+				D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */,
+				D09DEEEE1B98C62D0033BCFF /* Expenditure.m in Sources */,
+				D09DEEF41B99C99B0033BCFF /* ExpenditureTableCell.m in Sources */,
+				D09DEEFA1B99FE7C0033BCFF /* CategoryTableCell.m in Sources */,
+				D0B87C2B1B97699700A49B42 /* AddExpenditureViewController.m in Sources */,
+				D0D5E3781B975A6200EFD403 /* main.m in Sources */,
+				D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0D5E38A1B975A6200EFD403 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0D5E3951B975A6200EFD403 /* TightPocketTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0D5E3901B975A6200EFD403 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0D5E3711B975A6200EFD403 /* TightPocket */;
+			targetProxy = D0D5E38F1B975A6200EFD403 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0D5E3821B975A6200EFD403 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D5E3831B975A6200EFD403 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0D5E3871B975A6200EFD403 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0D5E3881B975A6200EFD403 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0D5E3961B975A6200EFD403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0D5E3971B975A6200EFD403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0D5E3991B975A6200EFD403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TightPocket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		D0D5E39A1B975A6200EFD403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = TightPocket/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		D0D5E39C1B975A6200EFD403 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TightPocketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TightPocket.app/TightPocket";
+			};
+			name = Debug;
+		};
+		D0D5E39D1B975A6200EFD403 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TightPocketTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TightPocket.app/TightPocket";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0D5E36D1B975A6200EFD403 /* Build configuration list for PBXProject "TightPocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D5E3961B975A6200EFD403 /* Debug */,
+				D0D5E3971B975A6200EFD403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D5E3981B975A6200EFD403 /* Build configuration list for PBXNativeTarget "TightPocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D5E3991B975A6200EFD403 /* Debug */,
+				D0D5E39A1B975A6200EFD403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0D5E39B1B975A6200EFD403 /* Build configuration list for PBXNativeTarget "TightPocketTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0D5E39C1B975A6200EFD403 /* Debug */,
+				D0D5E39D1B975A6200EFD403 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D0D5E37C1B975A6200EFD403 /* TightPocket.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D0D5E37D1B975A6200EFD403 /* TightPocket.xcdatamodel */,
+			);
+			currentVersion = D0D5E37D1B975A6200EFD403 /* TightPocket.xcdatamodel */;
+			path = TightPocket.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D0D5E36A1B975A6200EFD403 /* Project object */;
+}
