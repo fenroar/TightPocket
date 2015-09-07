@@ -12,7 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *categoryIconImageView;
 
 @end

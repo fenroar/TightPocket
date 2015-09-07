@@ -93,7 +93,7 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
 
 - (void)setCategoryForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
     NSString *category = expenditure.category;
-    [cell.categoryLabel setText:category];
+    [cell.categoryIconImageView setImage:[self imageForCategory:category]];
 }
 
 - (void)setNotesForCell:(ExpenditureTableCell *)cell expenditure:(Expenditure *)expenditure {
@@ -137,6 +137,24 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
 
 - (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
     return UIBarPositionTopAttached;
+}
+
+#pragma mark - Helper
+
+- (UIImage *)imageForCategory:(NSString *)category {
+    if ([category isEqualToString:kCategoryFood]) {
+        return [UIImage imageNamed:@"ic_food"];
+    } else if ([category isEqualToString:kCategoryEntertainment]) {
+        return [UIImage imageNamed:@"ic_entertainment"];
+    } else if ([category isEqualToString:kCategoryGroceries]) {
+        return [UIImage imageNamed:@"ic_grocery"];
+    } else if ([category isEqualToString:kCategoryMedical]) {
+        return [UIImage imageNamed:@"ic_medical"];
+    } else if ([category isEqualToString:kCategoryTravel]) {
+        return [UIImage imageNamed:@"ic_travel"];
+    } else {
+        return [UIImage imageNamed:@"ic_unknown"];
+    }
 }
 
 @end

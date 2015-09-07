@@ -277,27 +277,32 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGq-Bt-PJi" id="Ua4-Sb-VWK">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="752" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="752" text="Timestamp" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-3p-GQm">
-                                                    <rect key="frame" x="12" y="12" width="72" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Timestamp" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="JgG-3p-GQm">
+                                                    <rect key="frame" x="12" y="12" width="576" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="14" id="5F2-VL-LIf"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_grocery" translatesAutoresizingMaskIntoConstraints="NO" id="C84-Zd-eUh">
+                                                    <rect key="frame" x="12" y="32" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="Gvm-6Z-HXJ"/>
+                                                        <constraint firstAttribute="height" constant="24" id="J8x-Sq-O3C"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="2N7-C7-UhJ" userLabel="Amount">
-                                                    <rect key="frame" x="12" y="35" width="576" height="13.5"/>
+                                                    <rect key="frame" x="48" y="32" width="540" height="29"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="752" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="752" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REI-3K-oP5">
-                                                    <rect key="frame" x="12" y="48.5" width="576" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGr-ft-lLb" userLabel="Category">
-                                                    <rect key="frame" x="104" y="12" width="484" height="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REI-3K-oP5">
+                                                    <rect key="frame" x="48" y="61" width="540" height="8"/>
+                                                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -308,31 +313,29 @@
                                                 <constraint firstAttribute="bottom" secondItem="REI-3K-oP5" secondAttribute="bottom" constant="12" id="3ch-1k-w9G"/>
                                                 <constraint firstItem="REI-3K-oP5" firstAttribute="top" secondItem="2N7-C7-UhJ" secondAttribute="bottom" id="3kf-4G-302"/>
                                                 <constraint firstAttribute="bottom" secondItem="2N7-C7-UhJ" secondAttribute="bottom" constant="12" id="4dI-aa-II2"/>
-                                                <constraint firstItem="VGr-ft-lLb" firstAttribute="leading" secondItem="JgG-3p-GQm" secondAttribute="trailing" constant="20" id="FGy-30-QcK"/>
+                                                <constraint firstItem="C84-Zd-eUh" firstAttribute="leading" secondItem="Ua4-Sb-VWK" secondAttribute="leading" constant="12" id="Apd-Gi-Tuv"/>
+                                                <constraint firstItem="2N7-C7-UhJ" firstAttribute="leading" secondItem="C84-Zd-eUh" secondAttribute="trailing" constant="12" id="Bwe-gh-WgE"/>
+                                                <constraint firstItem="C84-Zd-eUh" firstAttribute="top" secondItem="JgG-3p-GQm" secondAttribute="bottom" constant="6" id="GqA-by-6lm"/>
                                                 <constraint firstItem="JgG-3p-GQm" firstAttribute="leading" secondItem="Ua4-Sb-VWK" secondAttribute="leading" constant="12" id="Ht4-kg-jLp"/>
-                                                <constraint firstItem="REI-3K-oP5" firstAttribute="leading" secondItem="Ua4-Sb-VWK" secondAttribute="leading" constant="12" id="I2c-EA-Png"/>
+                                                <constraint firstItem="REI-3K-oP5" firstAttribute="leading" secondItem="Ua4-Sb-VWK" secondAttribute="leading" constant="64" id="I2c-EA-Png"/>
+                                                <constraint firstAttribute="trailing" secondItem="JgG-3p-GQm" secondAttribute="trailing" constant="12" id="OIY-Wh-xUA"/>
                                                 <constraint firstAttribute="trailing" secondItem="REI-3K-oP5" secondAttribute="trailing" constant="12" id="ObC-1E-gUI"/>
-                                                <constraint firstItem="VGr-ft-lLb" firstAttribute="baseline" secondItem="JgG-3p-GQm" secondAttribute="baseline" id="ZRu-uL-Fk4"/>
-                                                <constraint firstAttribute="trailing" secondItem="VGr-ft-lLb" secondAttribute="trailing" constant="12" id="g2c-f4-9LJ"/>
-                                                <constraint firstItem="2N7-C7-UhJ" firstAttribute="leading" secondItem="Ua4-Sb-VWK" secondAttribute="leading" constant="12" id="hPe-uO-FMu"/>
-                                                <constraint firstItem="2N7-C7-UhJ" firstAttribute="baseline" secondItem="VGr-ft-lLb" secondAttribute="baseline" id="hd3-ko-aQu"/>
-                                                <constraint firstItem="VGr-ft-lLb" firstAttribute="top" secondItem="Ua4-Sb-VWK" secondAttribute="top" constant="12" id="kxn-Q7-vMx"/>
+                                                <constraint firstItem="2N7-C7-UhJ" firstAttribute="leading" secondItem="REI-3K-oP5" secondAttribute="leading" id="fHC-EQ-3rr"/>
+                                                <constraint firstItem="2N7-C7-UhJ" firstAttribute="leading" secondItem="Ua4-Sb-VWK" secondAttribute="leading" constant="64" id="hPe-uO-FMu"/>
                                                 <constraint firstItem="2N7-C7-UhJ" firstAttribute="top" secondItem="JgG-3p-GQm" secondAttribute="bottom" constant="6" id="x18-L8-SlH"/>
-                                                <constraint firstItem="VGr-ft-lLb" firstAttribute="baseline" secondItem="JgG-3p-GQm" secondAttribute="baseline" id="xl6-OW-Htm"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
                                                     <exclude reference="0t6-k0-Ugu"/>
                                                     <exclude reference="4dI-aa-II2"/>
-                                                    <exclude reference="hd3-ko-aQu"/>
-                                                    <exclude reference="ZRu-uL-Fk4"/>
-                                                    <exclude reference="kxn-Q7-vMx"/>
+                                                    <exclude reference="hPe-uO-FMu"/>
+                                                    <exclude reference="I2c-EA-Png"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="amountLabel" destination="2N7-C7-UhJ" id="Mec-T6-jyd"/>
-                                            <outlet property="categoryLabel" destination="VGr-ft-lLb" id="apj-hX-Z0u"/>
+                                            <outlet property="categoryIconImageView" destination="C84-Zd-eUh" id="VKY-c1-w3d"/>
                                             <outlet property="notesLabel" destination="REI-3K-oP5" id="C68-ay-hRJ"/>
                                             <outlet property="timestampLabel" destination="JgG-3p-GQm" id="Iup-27-6Ho"/>
                                         </connections>
@@ -550,4 +553,7 @@
             <point key="canvasLocation" x="2357" y="141"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_grocery" width="24" height="24"/>
+    </resources>
 </document>
