@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FNRLabel.h"
 
 @interface ExpenditureTableCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *timestampLabel;
-@property (weak, nonatomic) IBOutlet UILabel *amountLabel;
-@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (weak, nonatomic) IBOutlet FNRLabel *timestampLabel;
+@property (weak, nonatomic) IBOutlet FNRLabel *amountLabel;
+@property (weak, nonatomic) IBOutlet FNRLabel *notesLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *categoryIconImageView;
 
 @end

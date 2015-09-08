@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D0995DA21B9CFB0F00078235 /* UIImage+ColorOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995D9F1B9CFB0F00078235 /* UIImage+ColorOverlay.m */; };
 		D0995DA31B9CFB0F00078235 /* UIColor+FNR.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */; };
+		D0995DA71B9E0E7200078235 /* FNRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995DA61B9E0E7200078235 /* FNRLabel.m */; };
 		D09DEEEE1B98C62D0033BCFF /* Expenditure.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEED1B98C62D0033BCFF /* Expenditure.m */; };
 		D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF01B99C1320033BCFF /* ExpenditureListViewController.m */; };
 		D09DEEF41B99C99B0033BCFF /* ExpenditureTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEF31B99C99B0033BCFF /* ExpenditureTableCell.m */; };
@@ -43,6 +44,8 @@
 		D0995DA01B9CFB0F00078235 /* UIColor+FNR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "UIColor+FNR.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIColor+FNR.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D0995DA41B9CFB7700078235 /* TightPocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TightPocket-Prefix.pch"; sourceTree = "<group>"; };
+		D0995DA51B9E0E7200078235 /* FNRLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNRLabel.h; sourceTree = "<group>"; };
+		D0995DA61B9E0E7200078235 /* FNRLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNRLabel.m; sourceTree = "<group>"; };
 		D09DEEEC1B98C62D0033BCFF /* Expenditure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Expenditure.h; sourceTree = "<group>"; };
 		D09DEEED1B98C62D0033BCFF /* Expenditure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Expenditure.m; sourceTree = "<group>"; };
 		D09DEEEF1B99C1320033BCFF /* ExpenditureListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpenditureListViewController.h; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 				D0995D9F1B9CFB0F00078235 /* UIImage+ColorOverlay.m */,
 				D0995DA01B9CFB0F00078235 /* UIColor+FNR.h */,
 				D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */,
+				D0995DA51B9E0E7200078235 /* FNRLabel.h */,
+				D0995DA61B9E0E7200078235 /* FNRLabel.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				D0995DA31B9CFB0F00078235 /* UIColor+FNR.m in Sources */,
 				D0D5E3781B975A6200EFD403 /* main.m in Sources */,
 				D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */,
+				D0995DA71B9E0E7200078235 /* FNRLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

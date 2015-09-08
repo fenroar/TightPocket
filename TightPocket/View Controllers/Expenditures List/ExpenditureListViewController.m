@@ -100,6 +100,26 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
     [cell.notesLabel setText:expenditure.notes];
 }
 
+- (CGFloat)heightForBasicCellAtIndexPath:(NSIndexPath *)indexPath {
+    static ExpenditureTableCell *sizingCell = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sizingCell = [self.tableView dequeueReusableCellWithIdentifier:ExpenditureCellIdentifier];
+    });
+    
+    [self configureBasicCell:sizingCell atIndexPath:indexPath];
+    return [self calculateHeightForConfiguredSizingCell:sizingCell];
+}
+
+- (CGFloat)calculateHeightForConfiguredSizingCell:(UITableViewCell *)sizingCell {
+    sizingCell.bounds = CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.tableView.frame), CGRectGetHeight(sizingCell.bounds));
+    [sizingCell setNeedsLayout];
+    [sizingCell layoutIfNeeded];
+    
+    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height + 1.0f; // Add 1.0f for the cell separator height
+}
+
 #pragma mark - UITableViewDelegate / UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -114,23 +134,8 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
     return [self heightForBasicCellAtIndexPath:indexPath];
 }
 
-- (CGFloat)heightForBasicCellAtIndexPath:(NSIndexPath *)indexPath {
-    static ExpenditureTableCell *sizingCell = nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sizingCell = [self.tableView dequeueReusableCellWithIdentifier:ExpenditureCellIdentifier];
-    });
-    
-    [self configureBasicCell:sizingCell atIndexPath:indexPath];
-    return [self calculateHeightForConfiguredSizingCell:sizingCell];
-}
-
-- (CGFloat)calculateHeightForConfiguredSizingCell:(UITableViewCell *)sizingCell {
-    [sizingCell setNeedsLayout];
-    [sizingCell layoutIfNeeded];
-    
-    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    return size.height + 1.0f; // Add 1.0f for the cell separator height
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma UIToolbarDelegate
