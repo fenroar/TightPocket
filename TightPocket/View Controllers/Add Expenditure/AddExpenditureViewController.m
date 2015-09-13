@@ -44,6 +44,15 @@
     [self initialiseTextField:self.notesTextField placeholder:@"Notes"];
     
     [self.addButton addTarget:self action:@selector(didPressAddButton) forControlEvents:UIControlEventTouchUpInside];
+   
+    UIImage *buttonImage = [UIImage imageNamed:@"ic_done"];
+    self.addButton.tintColor = [UIColor FNRRed];
+    [self.addButton setTitle:@"" forState:UIControlStateNormal];
+    [self.addButton setImage:buttonImage
+            forState:UIControlStateNormal];
+    self.addButton.layer.cornerRadius = CGRectGetHeight(self.addButton.frame)/2;
+    self.addButton.layer.borderColor = [UIColor FNRDarkGrey].CGColor;
+    self.addButton.layer.borderWidth = 1.0f;
 }
 
 - (void)initaliseToolBar {
