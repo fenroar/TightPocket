@@ -23,11 +23,15 @@
     // Override point for customization after application launch.
     [self setAppearance];
     [self clearOldData];
-    MainViewController *initialViewController = (MainViewController *)self.window.rootViewController;
-    if ([initialViewController isKindOfClass:[FNRViewController class]]) {
-        initialViewController.managedObjectContext = self.managedObjectContext;
-    } else {
-        NSAssert(false, @"Failed to set managed object context for root view controller");
+    
+    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    
+    for (FNRViewController *vc in tabBarController.viewControllers) {
+        if ([vc isKindOfClass:[FNRViewController class]]) {
+            vc.managedObjectContext = self.managedObjectContext;
+        } else {
+            NSAssert(false, @"Failed to set managed object context for root view controller");
+        }
     }
     
     return YES;

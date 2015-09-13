@@ -18,6 +18,7 @@
 		D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C271B975DCA00A49B42 /* MainViewController.m */; };
 		D0B87C2B1B97699700A49B42 /* AddExpenditureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C2A1B97699700A49B42 /* AddExpenditureViewController.m */; };
 		D0B87C351B976DED00A49B42 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */; };
+		D0CE974F1BA5F7900094EEEF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE974E1BA5F7900094EEEF /* ProfileViewController.m */; };
 		D0D5E3781B975A6200EFD403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E3771B975A6200EFD403 /* main.m */; };
 		D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37A1B975A6200EFD403 /* AppDelegate.m */; };
 		D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37C1B975A6200EFD403 /* TightPocket.xcdatamodeld */; };
@@ -62,6 +63,8 @@
 		D0B87C2A1B97699700A49B42 /* AddExpenditureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExpenditureViewController.m; sourceTree = "<group>"; };
 		D0B87C331B976DED00A49B42 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
 		D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
+		D0CE974D1BA5F7900094EEEF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		D0CE974E1BA5F7900094EEEF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		D0D5E3721B975A6200EFD403 /* TightPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TightPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5E3761B975A6200EFD403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D5E3771B975A6200EFD403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,6 +112,15 @@
 				D0995DA61B9E0E7200078235 /* FNRLabel.m */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D0CE974C1BA5F7840094EEEF /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D0CE974D1BA5F7900094EEEF /* ProfileViewController.h */,
+				D0CE974E1BA5F7900094EEEF /* ProfileViewController.m */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		D0D5E3691B975A6200EFD403 = {
@@ -177,6 +189,7 @@
 		D0D5E3A91B975CF200EFD403 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D0CE974C1BA5F7840094EEEF /* Profile */,
 				D0D5E3AA1B975CF200EFD403 /* Add Expenditure */,
 				D0D5E3AB1B975CF200EFD403 /* Expenditures List */,
 				D0D5E3AC1B975CF200EFD403 /* Main View */,
@@ -346,6 +359,7 @@
 			files = (
 				D0B87C351B976DED00A49B42 /* NSDate+Extensions.m in Sources */,
 				D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */,
+				D0CE974F1BA5F7900094EEEF /* ProfileViewController.m in Sources */,
 				D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */,
 				D09DEEF71B99FE320033BCFF /* ExpenditureCategoryViewController.m in Sources */,
 				D0D5E3B51B975D1C00EFD403 /* FNRViewController.m in Sources */,

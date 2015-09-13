@@ -41,8 +41,7 @@
 - (void)initialise {
     [super initialise];
     [self initialiseSwipeGesture];
-    self.totalBalance = [NSDecimalNumber decimalNumberWithString:@"12345.00"];
-    
+    self.totalBalance = [NSDecimalNumber decimalNumberWithString:@"0.00"];
     self.currentDate = [NSDate today];
     
     // Date Buttons
