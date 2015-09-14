@@ -25,6 +25,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
 @property (strong, nonatomic) NSDecimalNumber *totalBalance;
 
+@property (weak, nonatomic) IBOutlet UIView *expendLimit;
+@property (weak, nonatomic) IBOutlet UIView *expendBar;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *expendBarWidth;
+
 @property (strong, nonatomic) NSDate *currentDate;
 
 @end
@@ -43,6 +47,9 @@
     [self initialiseSwipeGesture];
     self.totalBalance = [NSDecimalNumber decimalNumberWithString:@"0.00"];
     self.currentDate = [NSDate today];
+    
+    self.expendLimit.backgroundColor = [UIColor FNRBlue];
+    self.expendBar.backgroundColor = [UIColor FNRBlueLight];
     
     // Date Buttons
     [self customiseButton:self.previousDayButton
@@ -114,6 +121,8 @@
         for (Expenditure *expenditure in result) {
             self.totalBalance = [self.totalBalance decimalNumberByAdding:expenditure.amount];
         }
+        
+        [self updateBalanceLimit:self.totalBalance];
     }
     
     NSNumberFormatter *currencyFormatter = [NSNumberFormatter new];
@@ -132,6 +141,42 @@
         dateFormatter.dateFormat = kExpenditureDateFormat;
         self.dateLabel.text = [dateFormatter stringFromDate:self.currentDate];
     }
+}
+
+- (void)updateBalanceLimit:(NSDecimalNumber *)balance {
+    if ([self userHasSetBudget] &&
+        ([[self getBudget] compare:[NSDecimalNumber decimalNumberWithString:@"0.00"]]) == NSOrderedDescending) {
+        self.expendLimit.hidden = NO;
+        NSDecimalNumber *budget = [self getBudget];
+        
+        NSDecimalNumber *percentage;
+        if ([balance compare:budget] == NSOrderedDescending) {
+            percentage = [[budget decimalNumberByDividingBy:balance] decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"100.00"]];
+            
+            [self expendColorExceedBudget:YES];
+        } else {
+            percentage = [[balance decimalNumberByDividingBy:budget] decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"100.00"]];
+            [self expendColorExceedBudget:NO];
+        }
+        self.expendBarWidth.constant = [percentage floatValue] * 2;
+    } else {
+        self.expendLimit.hidden = YES;
+    }
+}
+
+- (BOOL)userHasSetBudget {
+    // TODO: Check user defaults to see if user has set preference
+    return YES;
+}
+
+- (NSDecimalNumber *)getBudget {
+    // TODO: Should fetch budget from what user has set in core data
+    return [NSDecimalNumber decimalNumberWithString:@"50.00"];
+}
+
+- (void)expendColorExceedBudget:(BOOL)exceeded {
+    self.expendLimit.backgroundColor = (exceeded) ? [UIColor FNRRed] : [UIColor FNRBlue];
+    self.expendBar.backgroundColor = [UIColor FNRBlueLight];
 }
 
 #pragma mark - Actions / Selectors

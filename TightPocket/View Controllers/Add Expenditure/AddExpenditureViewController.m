@@ -25,10 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     if (self.entryDate == nil) {
-        NSLog(@"Entry date not set!");
         self.entryDate = [NSDate date];
-    } else {
-        NSLog(@"Entry date: %@", self.entryDate);
     }
 }
 
@@ -177,8 +174,7 @@
     static NSString *numbers = @"0123456789";
     static NSString *numbersPeriod = @"01234567890.";
     static NSString *numbersComma = @"0123456789,";
-    
-    //NSLog(@"%d %d %@", range.location, range.length, string);
+
     if (range.length > 0 && [string length] == 0) {
         // enable delete
         return YES;
