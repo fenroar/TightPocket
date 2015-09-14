@@ -6,8 +6,12 @@
 //  Copyright (c) 2015 fenroar. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @protocol FNRTableCellProtocol <NSObject>
+
++ (UINib *)nib;
++ (CGFloat)cellHeight;
++ (NSString *)cellIdentifier;
 
 @end

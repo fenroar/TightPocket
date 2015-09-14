@@ -9,7 +9,6 @@
 #import "AddExpenditureViewController.h"
 #import "ExpenditureCategoryViewController.h"
 #import "Expenditure.h"
-#import "NSDate+Extensions.h"
 
 @interface AddExpenditureViewController () <UIToolbarDelegate, UITextFieldDelegate, ExpenditureCategoryDelegate>
 

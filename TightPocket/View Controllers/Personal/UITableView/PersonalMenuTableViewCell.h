@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FNRTableCellProtocol.h"
 
-@interface PersonalMenuTableViewCell : UITableViewCell
+@interface PersonalMenuTableViewCell : UITableViewCell <FNRTableCellProtocol>
 
 @end

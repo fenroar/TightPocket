@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "Expenditure.h"
-#import "NSDate+Extensions.h"
 #import "FNRViewController.h"
 #import "MainViewController.h"
 
@@ -178,7 +177,7 @@
     
     NSDictionary *titleTextAttributes = @{ NSForegroundColorAttributeName : [UIColor whiteColor],
                                            NSFontAttributeName : [UIFont systemFontOfSize:17.0f] };
-    
+    [[UITableView appearance] setBackgroundColor:[UIColor FNRWhite]];
     [[UINavigationBar appearance] setBarTintColor:barBackgroundColor];
     [[UINavigationBar appearance] setTintColor:barTintColor];
     [[UINavigationBar appearance] setTitleTextAttributes:titleTextAttributes];
@@ -194,6 +193,7 @@
     [[UIButton appearance] setTintColor:barTintColor];
     [[UIButton appearance] setTitleColor:[UIColor whiteColor]
                                 forState:UIControlStateNormal];
+    
 }
 
 #pragma mark - UITabBarControllerDelegate

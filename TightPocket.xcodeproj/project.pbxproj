@@ -18,7 +18,10 @@
 		D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C271B975DCA00A49B42 /* MainViewController.m */; };
 		D0B87C2B1B97699700A49B42 /* AddExpenditureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C2A1B97699700A49B42 /* AddExpenditureViewController.m */; };
 		D0B87C351B976DED00A49B42 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */; };
-		D0CE974F1BA5F7900094EEEF /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE974E1BA5F7900094EEEF /* ProfileViewController.m */; };
+		D0CE97531BA726E00094EEEF /* PersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE97521BA726E00094EEEF /* PersonalViewController.m */; };
+		D0CE97581BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE97571BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.m */; };
+		D0CE975B1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE975A1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m */; };
+		D0CE975D1BA72E780094EEEF /* PersonalMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CE975C1BA72E780094EEEF /* PersonalMenuCell.xib */; };
 		D0D5E3781B975A6200EFD403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E3771B975A6200EFD403 /* main.m */; };
 		D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37A1B975A6200EFD403 /* AppDelegate.m */; };
 		D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37C1B975A6200EFD403 /* TightPocket.xcdatamodeld */; };
@@ -63,8 +66,14 @@
 		D0B87C2A1B97699700A49B42 /* AddExpenditureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddExpenditureViewController.m; sourceTree = "<group>"; };
 		D0B87C331B976DED00A49B42 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
 		D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
-		D0CE974D1BA5F7900094EEEF /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		D0CE974E1BA5F7900094EEEF /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		D0CE97511BA726E00094EEEF /* PersonalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalViewController.h; sourceTree = "<group>"; };
+		D0CE97521BA726E00094EEEF /* PersonalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalViewController.m; sourceTree = "<group>"; };
+		D0CE97561BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalTableViewDataSourceDelegate.h; sourceTree = "<group>"; };
+		D0CE97571BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalTableViewDataSourceDelegate.m; sourceTree = "<group>"; };
+		D0CE97591BA72E6C0094EEEF /* PersonalMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalMenuTableViewCell.h; sourceTree = "<group>"; };
+		D0CE975A1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalMenuTableViewCell.m; sourceTree = "<group>"; };
+		D0CE975C1BA72E780094EEEF /* PersonalMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalMenuCell.xib; sourceTree = "<group>"; };
+		D0CE975E1BA72E9B0094EEEF /* FNRTableCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNRTableCellProtocol.h; sourceTree = "<group>"; };
 		D0D5E3721B975A6200EFD403 /* TightPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TightPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5E3761B975A6200EFD403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D5E3771B975A6200EFD403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -110,17 +119,31 @@
 				D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */,
 				D0995DA51B9E0E7200078235 /* FNRLabel.h */,
 				D0995DA61B9E0E7200078235 /* FNRLabel.m */,
+				D0CE975E1BA72E9B0094EEEF /* FNRTableCellProtocol.h */,
 			);
 			path = Common;
 			sourceTree = "<group>";
 		};
-		D0CE974C1BA5F7840094EEEF /* Profile */ = {
+		D0CE97501BA726E00094EEEF /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				D0CE974D1BA5F7900094EEEF /* ProfileViewController.h */,
-				D0CE974E1BA5F7900094EEEF /* ProfileViewController.m */,
+				D0CE97551BA727590094EEEF /* UITableView */,
+				D0CE97511BA726E00094EEEF /* PersonalViewController.h */,
+				D0CE97521BA726E00094EEEF /* PersonalViewController.m */,
 			);
-			path = Profile;
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		D0CE97551BA727590094EEEF /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				D0CE97561BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.h */,
+				D0CE97571BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.m */,
+				D0CE97591BA72E6C0094EEEF /* PersonalMenuTableViewCell.h */,
+				D0CE975A1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m */,
+				D0CE975C1BA72E780094EEEF /* PersonalMenuCell.xib */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		D0D5E3691B975A6200EFD403 = {
@@ -189,7 +212,7 @@
 		D0D5E3A91B975CF200EFD403 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D0CE974C1BA5F7840094EEEF /* Profile */,
+				D0CE97501BA726E00094EEEF /* Personal */,
 				D0D5E3AA1B975CF200EFD403 /* Add Expenditure */,
 				D0D5E3AB1B975CF200EFD403 /* Expenditures List */,
 				D0D5E3AC1B975CF200EFD403 /* Main View */,
@@ -339,6 +362,7 @@
 			files = (
 				D0D5E3841B975A6200EFD403 /* Main.storyboard in Resources */,
 				D0D5E3891B975A6200EFD403 /* LaunchScreen.xib in Resources */,
+				D0CE975D1BA72E780094EEEF /* PersonalMenuCell.xib in Resources */,
 				D0D5E3861B975A6200EFD403 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,19 +383,21 @@
 			files = (
 				D0B87C351B976DED00A49B42 /* NSDate+Extensions.m in Sources */,
 				D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */,
-				D0CE974F1BA5F7900094EEEF /* ProfileViewController.m in Sources */,
 				D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */,
 				D09DEEF71B99FE320033BCFF /* ExpenditureCategoryViewController.m in Sources */,
 				D0D5E3B51B975D1C00EFD403 /* FNRViewController.m in Sources */,
 				D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */,
+				D0CE97531BA726E00094EEEF /* PersonalViewController.m in Sources */,
 				D09DEEEE1B98C62D0033BCFF /* Expenditure.m in Sources */,
 				D0995DA21B9CFB0F00078235 /* UIImage+ColorOverlay.m in Sources */,
 				D09DEEF41B99C99B0033BCFF /* ExpenditureTableCell.m in Sources */,
 				D09DEEFA1B99FE7C0033BCFF /* CategoryTableCell.m in Sources */,
 				D0B87C2B1B97699700A49B42 /* AddExpenditureViewController.m in Sources */,
+				D0CE97581BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.m in Sources */,
 				D0995DA31B9CFB0F00078235 /* UIColor+FNR.m in Sources */,
 				D0D5E3781B975A6200EFD403 /* main.m in Sources */,
 				D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */,
+				D0CE975B1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m in Sources */,
 				D0995DA71B9E0E7200078235 /* FNRLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

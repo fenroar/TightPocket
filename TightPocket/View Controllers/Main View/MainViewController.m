@@ -9,7 +9,6 @@
 #import "MainViewController.h"
 #import "AddExpenditureViewController.h"
 #import "ExpenditureListViewController.h"
-#import "NSDate+Extensions.h"
 #import "Expenditure.h"
 
 @interface MainViewController ()
@@ -172,6 +171,7 @@
 
 - (BOOL)userHasSetBudget {
     // TODO: Check user defaults to see if user has set preference
+    BOOL hasSetBudget = [[NSUserDefaults standardUserDefaults] boolForKey:@"UserSetBudget"];
     return YES;
 }
 

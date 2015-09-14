@@ -7,21 +7,27 @@
 //
 
 #import "PersonalViewController.h"
+#import "PersonalTableViewDataSourceDelegate.h"
 
 @interface PersonalViewController ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) PersonalTableViewDataSourceDelegate *tableViewDataSourceDelegate;
 
 @end
 
 @implementation PersonalViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)initialise {
+    [super initialise];
+    
+    [self.tableView registerNib:[PersonalMenuTableViewCell nib]
+         forCellReuseIdentifier:[PersonalMenuTableViewCell cellIdentifier]];
+    
+    self.tableViewDataSourceDelegate = [PersonalTableViewDataSourceDelegate new];
+    self.tableView.delegate = self.tableViewDataSourceDelegate;
+    self.tableView.dataSource = self.tableViewDataSourceDelegate;
 }
 
 @end

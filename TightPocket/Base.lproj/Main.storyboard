@@ -302,10 +302,10 @@
             </objects>
             <point key="canvasLocation" x="-816" y="141"/>
         </scene>
-        <!--Profile-->
+        <!--Personal-->
         <scene sceneID="CaO-ja-8uh">
             <objects>
-                <viewController id="lwc-tE-F4l" customClass="ProfileViewController" sceneMemberID="viewController">
+                <viewController id="lwc-tE-F4l" customClass="PersonalViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8SK-kb-3gJ"/>
                         <viewControllerLayoutGuide type="bottom" id="f6n-YZ-Yr7"/>
@@ -313,9 +313,25 @@
                     <view key="view" contentMode="scaleToFill" id="ize-Es-mP6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="soc-NG-N4B">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="soc-NG-N4B" firstAttribute="top" secondItem="8SK-kb-3gJ" secondAttribute="bottom" id="BDJ-D0-ERf"/>
+                            <constraint firstItem="soc-NG-N4B" firstAttribute="leading" secondItem="ize-Es-mP6" secondAttribute="leading" id="Bj5-Pa-HU7"/>
+                            <constraint firstItem="f6n-YZ-Yr7" firstAttribute="top" secondItem="soc-NG-N4B" secondAttribute="bottom" id="dbc-gR-GsO"/>
+                            <constraint firstAttribute="trailing" secondItem="soc-NG-N4B" secondAttribute="trailing" id="yig-qe-Kc6"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="ic_face" id="O0I-Mm-GHZ"/>
+                    <tabBarItem key="tabBarItem" title="Personal" image="ic_face" id="O0I-Mm-GHZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="soc-NG-N4B" id="ILH-ty-Zk4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmZ-7W-baS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

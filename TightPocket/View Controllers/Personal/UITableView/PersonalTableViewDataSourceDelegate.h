@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PersonalMenuTableViewCell.h"
 
-@interface PersonalTableViewDataSourceDelegate : NSObject
+@interface PersonalTableViewDataSourceDelegate : NSObject <UITableViewDataSource, UITableViewDelegate>
 
 @end

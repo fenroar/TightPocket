@@ -9,7 +9,6 @@
 #import "ExpenditureListViewController.h"
 #import "ExpenditureTableCell.h"
 #import "Expenditure.h"
-#import "NSDate+Extensions.h"
 
 @interface ExpenditureListViewController () <UIToolbarDelegate, UITableViewDelegate, UITableViewDataSource>
 
