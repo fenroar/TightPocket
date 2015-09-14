@@ -12,7 +12,7 @@
 #import "FNRViewController.h"
 #import "MainViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -25,7 +25,7 @@
     [self clearOldData];
     
     UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-    
+    tabBarController.delegate = self;
     for (FNRViewController *vc in tabBarController.viewControllers) {
         if ([vc isKindOfClass:[FNRViewController class]]) {
             vc.managedObjectContext = self.managedObjectContext;
@@ -194,6 +194,14 @@
     [[UIButton appearance] setTintColor:barTintColor];
     [[UIButton appearance] setTitleColor:[UIColor whiteColor]
                                 forState:UIControlStateNormal];
+}
+
+#pragma mark - UITabBarControllerDelegate
+
+- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+    if ([viewController isKindOfClass:[MainViewController class]]) {
+        [((MainViewController *)viewController) resetDate];
+    }
 }
 
 @end
