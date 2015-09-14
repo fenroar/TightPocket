@@ -10,4 +10,6 @@
 
 @interface MainViewController : FNRViewController
 
+- (void)resetDate;
+
 @end

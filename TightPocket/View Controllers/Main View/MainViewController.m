@@ -133,8 +133,12 @@
 }
 
 - (void)updateDateView {
+    NSDate *lastMonthFromToday = [NSDate dayWithNoTime:[NSDate subtractNumberOfMonths:1
+                                                                             fromDate:[NSDate date]]];
     self.addButton.hidden = ![self.currentDate isToday];
     self.nextDayButton.hidden = [self.currentDate isToday];
+    self.previousDayButton.hidden = [self.currentDate compare:lastMonthFromToday] == NSOrderedSame;
+    
     if ([self.currentDate isToday]) {
         self.dateLabel.text = @"Today";
         
@@ -181,6 +185,11 @@
     self.expendBar.backgroundColor = [UIColor FNRGreen];
 }
 
+- (void)resetDate {
+    self.currentDate = [NSDate today];
+    [self updateLabels];
+}
+
 #pragma mark - Actions / Selectors
 
 - (void)didSwipe:(UISwipeGestureRecognizer *)gestureRecognizer {
@@ -218,8 +227,6 @@
         self.currentDate = nextDay;
         [self updateLabels];
     }
-    
-    self.previousDayButton.hidden = NO;
 }
 
 - (void)prevDay {
@@ -234,7 +241,6 @@
         [self updateLabels];
     }
     
-    self.previousDayButton.hidden = [self.currentDate compare:lastMonthFromToday] == NSOrderedSame;
 }
 
 @end
