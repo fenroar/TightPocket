@@ -234,7 +234,7 @@
         [self updateLabels];
     }
     
-    self.previousDayButton.hidden = [prevDay compare:lastMonthFromToday] == NSOrderedSame;
+    self.previousDayButton.hidden = [self.currentDate compare:lastMonthFromToday] == NSOrderedSame;
 }
 
 @end
