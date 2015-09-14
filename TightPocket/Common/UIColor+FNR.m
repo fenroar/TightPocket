@@ -45,6 +45,13 @@
                            alpha:1];
 }
 
++ (UIColor *)FNRGreen {
+    return [UIColor colorWithRed:85/255.0f
+                           green:235/255.0f
+                            blue:75/255.0f
+                           alpha:1];
+}
+
 + (UIColor *)FNRYellow {
     return [UIColor colorWithRed:254/255.0f
                            green:237/255.0f
@@ -56,6 +63,13 @@
     return [UIColor colorWithRed:249/255.0f
                            green:249/255.0f
                             blue:249/255.0f
+                           alpha:1];
+}
+
++ (UIColor *)FNRGrey {
+    return [UIColor colorWithRed:234/255.0f
+                           green:234/255.0f
+                            blue:234/255.0f
                            alpha:1];
 }
 

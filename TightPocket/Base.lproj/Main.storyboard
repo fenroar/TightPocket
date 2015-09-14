@@ -83,42 +83,40 @@
                                         <rect key="frame" x="200" y="182" width="200" height="6"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J26-bC-F16" userLabel="Expend bar">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="6"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="6"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="200" id="D7D-tY-WVb"/>
+                                                    <constraint firstAttribute="width" id="D7D-tY-WVb"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="FXo-qe-ANJ"/>
+                                            <constraint firstItem="J26-bC-F16" firstAttribute="top" secondItem="1Fa-tN-2hO" secondAttribute="top" id="GE5-Jk-0hi"/>
+                                            <constraint firstAttribute="bottom" secondItem="J26-bC-F16" secondAttribute="bottom" id="HXs-uM-yWF"/>
                                             <constraint firstAttribute="height" constant="6" id="NHK-mC-Gj0"/>
                                             <constraint firstItem="J26-bC-F16" firstAttribute="top" secondItem="1Fa-tN-2hO" secondAttribute="top" id="OgY-q2-bTF"/>
+                                            <constraint firstAttribute="centerY" secondItem="J26-bC-F16" secondAttribute="centerY" id="R0i-L3-GJS"/>
                                             <constraint firstAttribute="bottom" secondItem="J26-bC-F16" secondAttribute="bottom" id="bmi-e3-ILf"/>
                                             <constraint firstItem="J26-bC-F16" firstAttribute="leading" secondItem="1Fa-tN-2hO" secondAttribute="leading" id="swx-uQ-K1Z"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="OgY-q2-bTF"/>
+                                                <exclude reference="R0i-L3-GJS"/>
+                                                <exclude reference="bmi-e3-ILf"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="1Fa-tN-2hO" secondAttribute="centerX" id="0sy-Oa-hiu"/>
-                                    <constraint firstItem="VJH-R9-drk" firstAttribute="leading" secondItem="ya5-Dw-nDv" secondAttribute="leading" constant="22" id="53t-or-As0"/>
-                                    <constraint firstAttribute="trailing" secondItem="1Fa-tN-2hO" secondAttribute="trailing" id="5yC-Xh-bqg"/>
-                                    <constraint firstAttribute="trailing" secondItem="VJH-R9-drk" secondAttribute="trailing" constant="22" id="ETr-0o-ZgK"/>
                                     <constraint firstItem="VJH-R9-drk" firstAttribute="centerY" secondItem="ya5-Dw-nDv" secondAttribute="centerY" id="IXs-Wv-3pP"/>
-                                    <constraint firstItem="1Fa-tN-2hO" firstAttribute="leading" secondItem="ya5-Dw-nDv" secondAttribute="leading" id="TAA-5w-txM"/>
                                     <constraint firstItem="1Fa-tN-2hO" firstAttribute="top" secondItem="VJH-R9-drk" secondAttribute="bottom" constant="12" id="fSF-ZN-DnK"/>
                                     <constraint firstAttribute="trailing" secondItem="VJH-R9-drk" secondAttribute="trailing" id="jcn-3C-9yF"/>
                                     <constraint firstItem="VJH-R9-drk" firstAttribute="leading" secondItem="ya5-Dw-nDv" secondAttribute="leading" id="xpL-6p-5qg"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="53t-or-As0"/>
-                                        <exclude reference="ETr-0o-ZgK"/>
-                                        <exclude reference="5yC-Xh-bqg"/>
-                                        <exclude reference="TAA-5w-txM"/>
-                                    </mask>
-                                </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BeR-Df-74a" userLabel="Bottom">
                                 <rect key="frame" x="0.0" y="349" width="600" height="202"/>
@@ -274,8 +272,8 @@
                         <outlet property="balanceLabel" destination="VJH-R9-drk" id="LoD-Ox-RKe"/>
                         <outlet property="dateLabel" destination="Le3-6W-cBd" id="ODJ-aS-dVh"/>
                         <outlet property="expendBar" destination="J26-bC-F16" id="dla-4X-ZuZ"/>
-                        <outlet property="expendBarWidth" destination="D7D-tY-WVb" id="ks4-U8-QBi"/>
-                        <outlet property="expendLimit" destination="1Fa-tN-2hO" id="0NH-D6-8HR"/>
+                        <outlet property="expendBarBackground" destination="1Fa-tN-2hO" id="9SV-UO-Oa2"/>
+                        <outlet property="expendBarWidth" destination="D7D-tY-WVb" id="SVw-NV-PeV"/>
                         <outlet property="listButton" destination="jdY-8e-pf5" id="kbA-VA-1j2"/>
                         <outlet property="nextDayButton" destination="N0c-MU-aDf" id="zkH-Lk-jbY"/>
                         <outlet property="previousDayButton" destination="au5-Tb-uKu" id="sGU-un-eFi"/>

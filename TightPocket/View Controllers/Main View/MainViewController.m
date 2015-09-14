@@ -25,7 +25,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *balanceLabel;
 @property (strong, nonatomic) NSDecimalNumber *totalBalance;
 
-@property (weak, nonatomic) IBOutlet UIView *expendLimit;
+@property (weak, nonatomic) IBOutlet UIView *expendBarBackground;
 @property (weak, nonatomic) IBOutlet UIView *expendBar;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *expendBarWidth;
 
@@ -48,8 +48,10 @@
     self.totalBalance = [NSDecimalNumber decimalNumberWithString:@"0.00"];
     self.currentDate = [NSDate today];
     
-    self.expendLimit.backgroundColor = [UIColor FNRBlue];
-    self.expendBar.backgroundColor = [UIColor FNRBlueLight];
+    self.expendBarBackground.clipsToBounds = YES;
+    self.expendBarBackground.layer.cornerRadius = 2.0f;
+    self.expendBarBackground.layer.borderWidth = 1.0f;
+    self.expendBarBackground.layer.borderColor = [UIColor FNRGrey].CGColor;
     
     // Date Buttons
     [self customiseButton:self.previousDayButton
@@ -146,7 +148,7 @@
 - (void)updateBalanceLimit:(NSDecimalNumber *)balance {
     if ([self userHasSetBudget] &&
         ([[self getBudget] compare:[NSDecimalNumber decimalNumberWithString:@"0.00"]]) == NSOrderedDescending) {
-        self.expendLimit.hidden = NO;
+        self.expendBarBackground.hidden = NO;
         NSDecimalNumber *budget = [self getBudget];
         
         NSDecimalNumber *percentage;
@@ -160,7 +162,7 @@
         }
         self.expendBarWidth.constant = [percentage floatValue] * 2;
     } else {
-        self.expendLimit.hidden = YES;
+        self.expendBarBackground.hidden = YES;
     }
 }
 
@@ -175,8 +177,8 @@
 }
 
 - (void)expendColorExceedBudget:(BOOL)exceeded {
-    self.expendLimit.backgroundColor = (exceeded) ? [UIColor FNRRed] : [UIColor FNRBlue];
-    self.expendBar.backgroundColor = [UIColor FNRBlueLight];
+    self.expendBarBackground.backgroundColor = (exceeded) ? [UIColor FNRRed] : [UIColor FNRGrey];
+    self.expendBar.backgroundColor = [UIColor FNRGreen];
 }
 
 #pragma mark - Actions / Selectors

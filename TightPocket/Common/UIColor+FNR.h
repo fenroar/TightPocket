@@ -15,8 +15,10 @@
 + (UIColor *)FNRRedDark;
 + (UIColor *)FNRBlue;
 + (UIColor *)FNRBlueLight;
++ (UIColor *)FNRGreen;
 + (UIColor *)FNRYellow;
 + (UIColor *)FNRWhite;
++ (UIColor *)FNRGrey;
 + (UIColor *)FNRBlack;
 + (UIColor *)FNRDarkGrey;
 
