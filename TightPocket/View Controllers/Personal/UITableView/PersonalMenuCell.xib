@@ -36,6 +36,13 @@
                             </mask>
                         </variation>
                     </switch>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M0f-In-2CU">
+                        <rect key="frame" x="284" y="28" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="5I7-lh-enV"/>
+                            <constraint firstAttribute="width" constant="24" id="ahl-bf-ROe"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ucp-34-mcr" firstAttribute="top" secondItem="YiP-12-jBj" secondAttribute="top" constant="12" id="3dJ-Iz-Vd8"/>
@@ -44,14 +51,17 @@
                     <constraint firstItem="0JI-Ag-GYN" firstAttribute="top" secondItem="YiP-12-jBj" secondAttribute="top" constant="12" id="QeL-v3-LOX"/>
                     <constraint firstAttribute="trailing" secondItem="ucp-34-mcr" secondAttribute="trailing" constant="12" id="ale-MJ-LfW"/>
                     <constraint firstItem="b2V-Kb-axq" firstAttribute="leading" secondItem="0JI-Ag-GYN" secondAttribute="leading" id="gB9-Tw-NI7"/>
+                    <constraint firstAttribute="trailing" secondItem="M0f-In-2CU" secondAttribute="trailing" constant="12" id="nzr-Oj-ijf"/>
                     <constraint firstItem="ucp-34-mcr" firstAttribute="leading" secondItem="0JI-Ag-GYN" secondAttribute="trailing" constant="12" id="pT4-HR-qan"/>
                     <constraint firstItem="0JI-Ag-GYN" firstAttribute="leading" secondItem="YiP-12-jBj" secondAttribute="leading" constant="12" id="vUP-rZ-A1E"/>
+                    <constraint firstAttribute="centerY" secondItem="M0f-In-2CU" secondAttribute="centerY" id="vWj-ak-va6"/>
                     <constraint firstAttribute="bottom" secondItem="b2V-Kb-axq" secondAttribute="bottom" constant="12" id="w9r-LY-XAy"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="b2V-Kb-axq" id="25Q-Kb-jQV"/>
                 <outlet property="nameLabel" destination="0JI-Ag-GYN" id="bfq-68-zhN"/>
+                <outlet property="rightImageView" destination="M0f-In-2CU" id="oxY-qD-VKL"/>
                 <outlet property="toggle" destination="ucp-34-mcr" id="bDg-nn-JJv"/>
             </connections>
         </tableViewCell>

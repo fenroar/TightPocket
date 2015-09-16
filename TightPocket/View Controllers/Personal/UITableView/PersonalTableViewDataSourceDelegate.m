@@ -48,6 +48,12 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    	
+    if (indexPath.row < [self.menuItems count]) {
+        MenuItem menuItem = [[self.menuItems objectAtIndex:indexPath.row] integerValue];
+        [self didSelectMenuItem:menuItem];
+    }
 }
 
 #pragma mark - Helpers

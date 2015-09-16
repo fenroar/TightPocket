@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
 
 @end
 
@@ -20,7 +21,11 @@
 - (void)awakeFromNib {
     self.nameLabel.font = [UIFont systemFontOfSize:17.0];
     self.descriptionLabel.font = [UIFont systemFontOfSize:12.0];
+    self.descriptionLabel.textColor = [UIColor FNRDarkGrey];
     self.backgroundColor = [UIColor FNRWhite];
+    UIImage *image = [[UIImage imageNamed:@"ic_chevron_right"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    self.rightImageView.image = image;
+    self.rightImageView.tintColor = [UIColor FNRRed];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -33,22 +38,30 @@
     NSString *name = @"";
     NSString *description = @"";
     BOOL toggleHidden = YES;
+    BOOL chevronHidden = YES;
+    UITableViewCellSelectionStyle selectionStyle = UITableViewCellSelectionStyleNone;
+    
     _menuItem = menuItem;
     switch (menuItem) {
         case MenuItemSetBudget: {
             name = @"Budget";
-            description = @"Change your budget";
+            description = @"Set and edit your budget";
+            chevronHidden = NO;
+            selectionStyle = UITableViewCellSelectionStyleDefault;
             break;
         }
         case MenuItemSetStrictMode: {
             name = @"Strict Mode";
             description = @"Strict mode disallows you from adding more expenses to previous days";
+            selectionStyle = UITableViewCellSelectionStyleNone;
             toggleHidden = NO;
             break;
         }
         case MenuItemViewStats: {
             name = @"Stats";
             description = @"View your expense stats";
+            chevronHidden = NO;
+            selectionStyle = UITableViewCellSelectionStyleDefault;
             break;
         }
         default: {
@@ -59,6 +72,8 @@
     self.nameLabel.text = name;
     self.descriptionLabel.text = description;
     self.toggle.hidden = toggleHidden;
+    self.rightImageView.hidden = chevronHidden;
+    self.selectionStyle = selectionStyle;
 }
 
 #pragma mark - FNRTableCellProtocol

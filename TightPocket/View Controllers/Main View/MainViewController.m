@@ -50,7 +50,7 @@
     self.expendBarBackground.clipsToBounds = YES;
     self.expendBarBackground.layer.cornerRadius = 2.0f;
     self.expendBarBackground.layer.borderWidth = 1.0f;
-    self.expendBarBackground.layer.borderColor = [UIColor FNRGrey].CGColor;
+    self.expendBarBackground.layer.borderColor = [UIColor FNRDarkGrey].CGColor;
     
     // Date Buttons
     [self customiseButton:self.previousDayButton

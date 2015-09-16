@@ -81,9 +81,9 @@
 }
 
 + (UIColor *)FNRDarkGrey {
-    return [UIColor colorWithRed:35/255.0f
-                           green:36/255.0f
-                            blue:41/255.0f
+    return [UIColor colorWithRed:174/255.0f
+                           green:174/255.0f
+                            blue:174/255.0f
                            alpha:1];
 }
 
