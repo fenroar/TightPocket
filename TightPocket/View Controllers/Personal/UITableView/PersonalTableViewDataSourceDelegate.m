@@ -56,6 +56,15 @@
     }
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *blankView = [UIView new];
+    return blankView;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 24.0f;
+}
+
 #pragma mark - Helpers
 
 - (void)switchDidChange:(UISwitch *)toggle {

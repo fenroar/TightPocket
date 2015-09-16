@@ -21,6 +21,7 @@
 		D0CE97581BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE97571BA7276E0094EEEF /* PersonalTableViewDataSourceDelegate.m */; };
 		D0CE975B1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE975A1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m */; };
 		D0CE975D1BA72E780094EEEF /* PersonalMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CE975C1BA72E780094EEEF /* PersonalMenuCell.xib */; };
+		D0CE97651BAA23450094EEEF /* SetBudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE97641BAA23450094EEEF /* SetBudgetViewController.m */; };
 		D0D5E3781B975A6200EFD403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E3771B975A6200EFD403 /* main.m */; };
 		D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37A1B975A6200EFD403 /* AppDelegate.m */; };
 		D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37C1B975A6200EFD403 /* TightPocket.xcdatamodeld */; };
@@ -71,6 +72,8 @@
 		D0CE975A1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalMenuTableViewCell.m; sourceTree = "<group>"; };
 		D0CE975C1BA72E780094EEEF /* PersonalMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalMenuCell.xib; sourceTree = "<group>"; };
 		D0CE975E1BA72E9B0094EEEF /* FNRTableCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNRTableCellProtocol.h; sourceTree = "<group>"; };
+		D0CE97631BAA23450094EEEF /* SetBudgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetBudgetViewController.h; sourceTree = "<group>"; };
+		D0CE97641BAA23450094EEEF /* SetBudgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetBudgetViewController.m; sourceTree = "<group>"; };
 		D0D5E3721B975A6200EFD403 /* TightPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TightPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5E3761B975A6200EFD403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D5E3771B975A6200EFD403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,6 +142,15 @@
 				D0CE975C1BA72E780094EEEF /* PersonalMenuCell.xib */,
 			);
 			path = UITableView;
+			sourceTree = "<group>";
+		};
+		D0CE97621BAA23350094EEEF /* Set Budget */ = {
+			isa = PBXGroup;
+			children = (
+				D0CE97631BAA23450094EEEF /* SetBudgetViewController.h */,
+				D0CE97641BAA23450094EEEF /* SetBudgetViewController.m */,
+			);
+			path = "Set Budget";
 			sourceTree = "<group>";
 		};
 		D0D5E3691B975A6200EFD403 = {
@@ -211,9 +223,8 @@
 				D0D5E3AA1B975CF200EFD403 /* Add Expenditure */,
 				D0D5E3AB1B975CF200EFD403 /* Expenditures List */,
 				D0D5E3AC1B975CF200EFD403 /* Main View */,
-				D0D5E3AF1B975CF200EFD403 /* Set Amount */,
+				D0CE97621BAA23350094EEEF /* Set Budget */,
 				D0D5E3B01B975CF200EFD403 /* Set Category */,
-				D0D5E3B11B975CF200EFD403 /* Set Note */,
 				D0D5E3B31B975D1C00EFD403 /* FNRViewController.h */,
 				D0D5E3B41B975D1C00EFD403 /* FNRViewController.m */,
 			);
@@ -249,13 +260,6 @@
 			path = "Main View";
 			sourceTree = "<group>";
 		};
-		D0D5E3AF1B975CF200EFD403 /* Set Amount */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Set Amount";
-			sourceTree = "<group>";
-		};
 		D0D5E3B01B975CF200EFD403 /* Set Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,13 +269,6 @@
 				D09DEEF91B99FE7C0033BCFF /* CategoryTableCell.m */,
 			);
 			path = "Set Category";
-			sourceTree = "<group>";
-		};
-		D0D5E3B11B975CF200EFD403 /* Set Note */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Set Note";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +389,7 @@
 				D0D5E3781B975A6200EFD403 /* main.m in Sources */,
 				D09DEEF11B99C1320033BCFF /* ExpenditureListViewController.m in Sources */,
 				D0CE975B1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m in Sources */,
+				D0CE97651BAA23450094EEEF /* SetBudgetViewController.m in Sources */,
 				D0995DA71B9E0E7200078235 /* FNRLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

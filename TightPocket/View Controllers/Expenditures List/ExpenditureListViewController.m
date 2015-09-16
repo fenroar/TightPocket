@@ -137,7 +137,7 @@ static NSString * const ExpenditureCellIdentifier = @"ExpenditureCell";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-#pragma UIToolbarDelegate
+#pragma mark - UIToolbarDelegate
 
 - (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
     return UIBarPositionTopAttached;

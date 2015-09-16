@@ -335,7 +335,73 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wmZ-7W-baS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="933"/>
+            <point key="canvasLocation" x="120" y="1619"/>
+        </scene>
+        <!--Set Budget View Controller-->
+        <scene sceneID="iwu-et-ePu">
+            <objects>
+                <viewController storyboardIdentifier="BudgetVC" id="ZZy-37-dI0" customClass="SetBudgetViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rCd-PF-lZU"/>
+                        <viewControllerLayoutGuide type="bottom" id="cBP-ei-WJp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uHw-Hc-UcN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eyk-Nc-xBV">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items/>
+                            </toolbar>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqP-3s-Rdk">
+                                <rect key="frame" x="539" y="76" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Budget" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haz-Wc-GKh">
+                                <rect key="frame" x="12" y="76" width="515" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See if your daily expenses are exceeding the budget you set" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vb-bi-pmc">
+                                <rect key="frame" x="12" y="96" width="515" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UqP-3s-Rdk" firstAttribute="leading" secondItem="Haz-Wc-GKh" secondAttribute="trailing" constant="12" id="35L-Sh-bxr"/>
+                            <constraint firstItem="UqP-3s-Rdk" firstAttribute="top" secondItem="rCd-PF-lZU" secondAttribute="bottom" constant="12" id="6tc-Ut-Chp"/>
+                            <constraint firstItem="7vb-bi-pmc" firstAttribute="leading" secondItem="Haz-Wc-GKh" secondAttribute="leading" id="7bi-1J-lVg"/>
+                            <constraint firstAttribute="trailing" secondItem="UqP-3s-Rdk" secondAttribute="trailing" constant="12" id="7gg-Hc-z7b"/>
+                            <constraint firstAttribute="trailing" secondItem="Haz-Wc-GKh" secondAttribute="trailing" constant="12" id="H3P-nW-2Qv"/>
+                            <constraint firstItem="UqP-3s-Rdk" firstAttribute="top" secondItem="Eyk-Nc-xBV" secondAttribute="bottom" constant="12" id="PKP-T9-frq"/>
+                            <constraint firstAttribute="trailing" secondItem="7vb-bi-pmc" secondAttribute="trailing" constant="546" id="QCx-1c-xzI"/>
+                            <constraint firstItem="Haz-Wc-GKh" firstAttribute="leading" secondItem="uHw-Hc-UcN" secondAttribute="leading" constant="12" id="Ujx-tr-C4u"/>
+                            <constraint firstItem="Eyk-Nc-xBV" firstAttribute="top" secondItem="rCd-PF-lZU" secondAttribute="bottom" id="i3r-aj-JUp"/>
+                            <constraint firstAttribute="trailing" secondItem="Eyk-Nc-xBV" secondAttribute="trailing" id="ift-qQ-zO4"/>
+                            <constraint firstItem="Haz-Wc-GKh" firstAttribute="top" secondItem="Eyk-Nc-xBV" secondAttribute="bottom" constant="12" id="kmj-iM-vnS"/>
+                            <constraint firstItem="7vb-bi-pmc" firstAttribute="top" secondItem="Haz-Wc-GKh" secondAttribute="bottom" id="mOJ-Nb-io1"/>
+                            <constraint firstItem="7vb-bi-pmc" firstAttribute="trailing" secondItem="Haz-Wc-GKh" secondAttribute="trailing" id="pDf-NN-Rmh"/>
+                            <constraint firstItem="Eyk-Nc-xBV" firstAttribute="leading" secondItem="uHw-Hc-UcN" secondAttribute="leading" id="q70-B5-set"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="H3P-nW-2Qv"/>
+                                <exclude reference="QCx-1c-xzI"/>
+                                <exclude reference="6tc-Ut-Chp"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="budgetSwitch" destination="UqP-3s-Rdk" id="Ipu-U8-ohG"/>
+                        <outlet property="toolBar" destination="Eyk-Nc-xBV" id="SXO-CT-XkG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zve-Mr-Kh0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="1619"/>
         </scene>
         <!--Expenditure List View Controller-->
         <scene sceneID="ekq-jW-3vG">
@@ -634,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJZ-Vy-sFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2357" y="141"/>
+            <point key="canvasLocation" x="1643" y="141"/>
         </scene>
     </scenes>
     <resources>

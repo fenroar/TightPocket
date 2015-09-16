@@ -8,6 +8,7 @@
 
 #import "PersonalViewController.h"
 #import "PersonalTableViewDataSourceDelegate.h"
+#import "SetBudgetViewController.h"
 
 @interface PersonalViewController () <MenuProtocol>
 
@@ -28,7 +29,9 @@
 #pragma mark - MenuProtocol
 
 - (void)didSelectMenuItemSetBudget {
-    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SetBudgetViewController *budgetVC = [storyboard instantiateViewControllerWithIdentifier:@"BudgetVC"];
+    [self presentViewController:budgetVC animated:YES completion:nil];
 }
 
 - (void)didSelectMenuItemStats {
