@@ -9,7 +9,7 @@
 #import "PersonalViewController.h"
 #import "PersonalTableViewDataSourceDelegate.h"
 
-@interface PersonalViewController ()
+@interface PersonalViewController () <MenuProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -21,13 +21,18 @@
 
 - (void)initialise {
     [super initialise];
+    self.tableViewDataSourceDelegate = [[PersonalTableViewDataSourceDelegate alloc] initWithTableView:self.tableView];
+    self.tableViewDataSourceDelegate.delegate = self;
+}
+
+#pragma mark - MenuProtocol
+
+- (void)didSelectMenuItemSetBudget {
     
-    [self.tableView registerNib:[PersonalMenuTableViewCell nib]
-         forCellReuseIdentifier:[PersonalMenuTableViewCell cellIdentifier]];
+}
+
+- (void)didSelectMenuItemStats {
     
-    self.tableViewDataSourceDelegate = [PersonalTableViewDataSourceDelegate new];
-    self.tableView.delegate = self.tableViewDataSourceDelegate;
-    self.tableView.dataSource = self.tableViewDataSourceDelegate;
 }
 
 @end

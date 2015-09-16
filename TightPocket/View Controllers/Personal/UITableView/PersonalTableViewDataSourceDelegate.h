@@ -7,8 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PersonalMenuTableViewCell.h"
+
+@protocol MenuProtocol;
 
 @interface PersonalTableViewDataSourceDelegate : NSObject <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) UITableView *tableView;
+@property (weak, nonatomic) id<MenuProtocol> delegate;
+
+- (instancetype)initWithTableView:(UITableView *)tableView;
+
+@end
+
+@protocol MenuProtocol <NSObject>
+- (void)didSelectMenuItemSetBudget;
+- (void)didSelectMenuItemStats;
 @end

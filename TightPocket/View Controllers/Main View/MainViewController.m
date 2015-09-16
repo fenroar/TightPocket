@@ -134,7 +134,9 @@
 - (void)updateDateView {
     NSDate *lastMonthFromToday = [NSDate dayWithNoTime:[NSDate subtractNumberOfMonths:1
                                                                              fromDate:[NSDate date]]];
-    self.addButton.hidden = ![self.currentDate isToday];
+    BOOL strictMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"UserStrictMode"];
+    self.addButton.hidden = (strictMode) ? ![self.currentDate isToday] : NO;
+    
     self.nextDayButton.hidden = [self.currentDate isToday];
     self.previousDayButton.hidden = [self.currentDate compare:lastMonthFromToday] == NSOrderedSame;
     
@@ -209,6 +211,10 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     AddExpenditureViewController *addExpenditureVC = [storyboard instantiateViewControllerWithIdentifier:@"AddExpenditureVC"];
     addExpenditureVC.managedObjectContext = self.managedObjectContext;
+    BOOL strictMode = [[NSUserDefaults standardUserDefaults] boolForKey:@"UserStrictMode"];
+    if (!strictMode) {
+        addExpenditureVC.entryDate = self.currentDate;
+    }
     [self presentViewController:addExpenditureVC animated:YES completion:nil];
 }
 

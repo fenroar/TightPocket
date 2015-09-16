@@ -8,10 +8,18 @@
 
 #import "PersonalMenuTableViewCell.h"
 
+@interface PersonalMenuTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
+@end
+
 @implementation PersonalMenuTableViewCell
 
 - (void)awakeFromNib {
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.nameLabel.font = [UIFont systemFontOfSize:17.0];
+    self.descriptionLabel.font = [UIFont systemFontOfSize:12.0];
     self.backgroundColor = [UIColor FNRWhite];
 }
 
@@ -19,6 +27,38 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setMenuItem:(MenuItem)menuItem {
+    NSString *name = @"";
+    NSString *description = @"";
+    BOOL toggleHidden = YES;
+    _menuItem = menuItem;
+    switch (menuItem) {
+        case MenuItemSetBudget: {
+            name = @"Budget";
+            description = @"Change your budget";
+            break;
+        }
+        case MenuItemSetStrictMode: {
+            name = @"Strict Mode";
+            description = @"Strict mode disallows you from adding more expenses to previous days";
+            toggleHidden = NO;
+            break;
+        }
+        case MenuItemViewStats: {
+            name = @"Stats";
+            description = @"View your expense stats";
+            break;
+        }
+        default: {
+            break;
+        }
+    }
+    
+    self.nameLabel.text = name;
+    self.descriptionLabel.text = description;
+    self.toggle.hidden = toggleHidden;
 }
 
 #pragma mark - FNRTableCellProtocol
