@@ -9,6 +9,7 @@
 #import "PersonalViewController.h"
 #import "PersonalTableViewDataSourceDelegate.h"
 #import "SetBudgetViewController.h"
+#import "StatsViewController.h"
 
 @interface PersonalViewController () <MenuProtocol>
 
@@ -35,7 +36,10 @@
 }
 
 - (void)didSelectMenuItemStats {
-    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    StatsViewController *statsVC = [storyboard instantiateViewControllerWithIdentifier:@"StatsVC"];
+    statsVC.managedObjectContext = self.managedObjectContext;
+    [self presentViewController:statsVC animated:YES completion:nil];
 }
 
 @end

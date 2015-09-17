@@ -456,6 +456,24 @@
             </objects>
             <point key="canvasLocation" x="930" y="1619"/>
         </scene>
+        <!--Stats View Controller-->
+        <scene sceneID="x3b-iG-Cq4">
+            <objects>
+                <viewController storyboardIdentifier="StatsVC" id="kdv-lp-vxx" customClass="StatsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bwc-dI-WmZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="9E2-dO-KNi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dNF-eX-Pjf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ker-4S-POd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="930" y="2313"/>
+        </scene>
         <!--Expenditure List View Controller-->
         <scene sceneID="ekq-jW-3vG">
             <objects>

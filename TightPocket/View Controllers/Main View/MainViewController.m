@@ -45,7 +45,7 @@
     [super initialise];
     [self initialiseSwipeGesture];
     self.totalBalance = [NSDecimalNumber decimalNumberWithString:@"0.00"];
-    self.currentDate = [NSDate today];
+    self.currentDate = [NSDate startOfToday];
     
     self.expendBarBackground.clipsToBounds = YES;
     self.expendBarBackground.layer.cornerRadius = 2.0f;
@@ -192,7 +192,7 @@
 }
 
 - (void)resetDate {
-    self.currentDate = [NSDate today];
+    self.currentDate = [NSDate startOfToday];
     [self updateLabels];
 }
 

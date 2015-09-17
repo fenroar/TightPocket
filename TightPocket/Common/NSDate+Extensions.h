@@ -11,7 +11,8 @@
 @interface NSDate (Extensions)
 
 + (NSDate *)dayWithNoTime:(NSDate *)aDate;
-+ (NSDate *)today;
++ (NSDate *)startOfToday;
++ (NSDate *)startOfThisMonth;
 + (NSDate *)subtractNumberOfMonths:(NSInteger)months
                           fromDate:(NSDate *)aDate;
 + (NSDate *)addNumberOfDays:(NSInteger)numberOfDay

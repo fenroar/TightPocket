@@ -19,8 +19,14 @@
     return dayWithNoTime;
 }
 
-+ (NSDate *)today {
++ (NSDate *)startOfToday {
     return [NSDate dayWithNoTime:[NSDate date]];
+}
+
++ (NSDate *)startOfThisMonth {
+    NSDateComponents *comp = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:[NSDate startOfToday]];
+    [comp setDay:1];
+    return [[NSCalendar currentCalendar] dateFromComponents:comp];
 }
 
 + (NSDate *)subtractNumberOfMonths:(NSInteger)months
