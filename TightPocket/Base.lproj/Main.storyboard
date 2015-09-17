@@ -384,48 +384,71 @@
                                 <items/>
                             </toolbar>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqP-3s-Rdk">
-                                <rect key="frame" x="539" y="76" width="51" height="31"/>
+                                <rect key="frame" x="529" y="76" width="51" height="31"/>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Budget" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Haz-Wc-GKh">
-                                <rect key="frame" x="12" y="76" width="515" height="20.5"/>
+                                <rect key="frame" x="22" y="76" width="495" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See if your daily expenses are exceeding the budget you set" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vb-bi-pmc">
-                                <rect key="frame" x="12" y="96" width="515" height="14.5"/>
+                                <rect key="frame" x="22" y="96" width="495" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Budget" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yj2-lh-xUI">
+                                <rect key="frame" x="22" y="140.5" width="98.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q7P-vx-B8J">
+                                <rect key="frame" x="22" y="169" width="211" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="f5p-AY-86w"/>
+                                    <constraint firstAttribute="height" constant="44" id="pCW-o0-rc9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="q7P-vx-B8J" firstAttribute="leading" secondItem="Yj2-lh-xUI" secondAttribute="leading" id="0Zz-Pf-lbQ"/>
                             <constraint firstItem="UqP-3s-Rdk" firstAttribute="leading" secondItem="Haz-Wc-GKh" secondAttribute="trailing" constant="12" id="35L-Sh-bxr"/>
                             <constraint firstItem="UqP-3s-Rdk" firstAttribute="top" secondItem="rCd-PF-lZU" secondAttribute="bottom" constant="12" id="6tc-Ut-Chp"/>
                             <constraint firstItem="7vb-bi-pmc" firstAttribute="leading" secondItem="Haz-Wc-GKh" secondAttribute="leading" id="7bi-1J-lVg"/>
-                            <constraint firstAttribute="trailing" secondItem="UqP-3s-Rdk" secondAttribute="trailing" constant="12" id="7gg-Hc-z7b"/>
+                            <constraint firstAttribute="trailing" secondItem="UqP-3s-Rdk" secondAttribute="trailing" constant="22" id="7gg-Hc-z7b"/>
+                            <constraint firstItem="Yj2-lh-xUI" firstAttribute="leading" secondItem="7vb-bi-pmc" secondAttribute="leading" id="8su-FX-jF2"/>
+                            <constraint firstItem="q7P-vx-B8J" firstAttribute="top" secondItem="Yj2-lh-xUI" secondAttribute="bottom" constant="8" id="8yK-lw-EOd"/>
                             <constraint firstAttribute="trailing" secondItem="Haz-Wc-GKh" secondAttribute="trailing" constant="12" id="H3P-nW-2Qv"/>
                             <constraint firstItem="UqP-3s-Rdk" firstAttribute="top" secondItem="Eyk-Nc-xBV" secondAttribute="bottom" constant="12" id="PKP-T9-frq"/>
                             <constraint firstAttribute="trailing" secondItem="7vb-bi-pmc" secondAttribute="trailing" constant="546" id="QCx-1c-xzI"/>
-                            <constraint firstItem="Haz-Wc-GKh" firstAttribute="leading" secondItem="uHw-Hc-UcN" secondAttribute="leading" constant="12" id="Ujx-tr-C4u"/>
+                            <constraint firstItem="Haz-Wc-GKh" firstAttribute="leading" secondItem="uHw-Hc-UcN" secondAttribute="leading" constant="22" id="Ujx-tr-C4u"/>
                             <constraint firstItem="Eyk-Nc-xBV" firstAttribute="top" secondItem="rCd-PF-lZU" secondAttribute="bottom" id="i3r-aj-JUp"/>
                             <constraint firstAttribute="trailing" secondItem="Eyk-Nc-xBV" secondAttribute="trailing" id="ift-qQ-zO4"/>
                             <constraint firstItem="Haz-Wc-GKh" firstAttribute="top" secondItem="Eyk-Nc-xBV" secondAttribute="bottom" constant="12" id="kmj-iM-vnS"/>
+                            <constraint firstItem="Yj2-lh-xUI" firstAttribute="top" secondItem="7vb-bi-pmc" secondAttribute="bottom" constant="30" id="kta-C4-i4s"/>
                             <constraint firstItem="7vb-bi-pmc" firstAttribute="top" secondItem="Haz-Wc-GKh" secondAttribute="bottom" id="mOJ-Nb-io1"/>
                             <constraint firstItem="7vb-bi-pmc" firstAttribute="trailing" secondItem="Haz-Wc-GKh" secondAttribute="trailing" id="pDf-NN-Rmh"/>
                             <constraint firstItem="Eyk-Nc-xBV" firstAttribute="leading" secondItem="uHw-Hc-UcN" secondAttribute="leading" id="q70-B5-set"/>
+                            <constraint firstItem="q7P-vx-B8J" firstAttribute="leading" secondItem="Yj2-lh-xUI" secondAttribute="leading" id="zfj-cu-P6M"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="H3P-nW-2Qv"/>
                                 <exclude reference="QCx-1c-xzI"/>
+                                <exclude reference="zfj-cu-P6M"/>
                                 <exclude reference="6tc-Ut-Chp"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="budgetSwitch" destination="UqP-3s-Rdk" id="Ipu-U8-ohG"/>
+                        <outlet property="budgetTextField" destination="q7P-vx-B8J" id="6af-rt-4nA"/>
+                        <outlet property="dailyBudgetTitle" destination="Yj2-lh-xUI" id="4Hh-UC-RQc"/>
                         <outlet property="toolBar" destination="Eyk-Nc-xBV" id="SXO-CT-XkG"/>
                     </connections>
                 </viewController>

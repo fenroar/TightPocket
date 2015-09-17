@@ -8,6 +8,7 @@
 
 #import "AddExpenditureViewController.h"
 #import "ExpenditureCategoryViewController.h"
+#import "BudgetValidator.h"
 #import "Expenditure.h"
 
 @interface AddExpenditureViewController () <UIToolbarDelegate, UITextFieldDelegate, ExpenditureCategoryDelegate>
@@ -146,9 +147,7 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     if (textField == self.amountTextField) {
-        return [self validateTextFieldForAmount:self.amountTextField
-                  shouldChangeCharactersInRange:range
-                              replacementString:string];
+        return [BudgetValidator validateTextFieldForAmount:self.amountTextField shouldChangeCharactersInRange:range replacementString:string];
     }
     
     return YES;
@@ -163,45 +162,6 @@
 
 - (void)didSelectCategory:(NSString *)category {
     self.categoryTextField.text = category;
-}
-
-#pragma mark - Amount 
-
-- (BOOL)validateTextFieldForAmount:(UITextField *)textField
-     shouldChangeCharactersInRange:(NSRange)range
-                 replacementString:(NSString *)string {
-    static NSString *numbers = @"0123456789";
-    static NSString *numbersPeriod = @"01234567890.";
-    static NSString *numbersComma = @"0123456789,";
-
-    if (range.length > 0 && [string length] == 0) {
-        // enable delete
-        return YES;
-    }
-    
-    NSString *symbol = [[NSLocale currentLocale] objectForKey:NSLocaleDecimalSeparator];
-    if (range.location == 0 && [string isEqualToString:symbol]) {
-        // decimalseparator should not be first
-        return NO;
-    }
-    NSCharacterSet *characterSet;
-    NSRange separatorRange = [textField.text rangeOfString:symbol];
-    if (separatorRange.location == NSNotFound) {
-        if ([symbol isEqualToString:@"."]) {
-            characterSet = [[NSCharacterSet characterSetWithCharactersInString:numbersPeriod] invertedSet];
-        }
-        else {
-            characterSet = [[NSCharacterSet characterSetWithCharactersInString:numbersComma] invertedSet];
-        }
-    }
-    else {
-        // allow 2 characters after the decimal separator
-        if (range.location > (separatorRange.location + 2)) {
-            return NO;
-        }
-        characterSet = [[NSCharacterSet characterSetWithCharactersInString:numbers] invertedSet];
-    }
-    return ([[string stringByTrimmingCharactersInSet:characterSet] length] > 0);
 }
 
 #pragma UIToolbarDelegate

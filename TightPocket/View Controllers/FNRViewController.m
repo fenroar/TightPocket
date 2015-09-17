@@ -24,4 +24,8 @@
     self.view.backgroundColor = [UIColor FNRWhite];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [self.view endEditing:YES];
+}
+
 @end

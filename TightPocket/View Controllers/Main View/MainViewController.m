@@ -162,7 +162,8 @@
             
             [self expendColorExceedBudget:YES];
         } else {
-            percentage = [[balance decimalNumberByDividingBy:budget] decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"100.00"]];
+            percentage = [[balance decimalNumberByMultiplyingBy:[NSDecimalNumber decimalNumberWithString:@"100.00"]] decimalNumberByDividingBy:budget];
+            
             [self expendColorExceedBudget:NO];
         }
         self.expendBarWidth.constant = [percentage floatValue] * 2;
@@ -177,8 +178,12 @@
 }
 
 - (NSDecimalNumber *)getBudget {
-    // TODO: Should fetch budget from what user has set in core data
-    return [NSDecimalNumber decimalNumberWithString:@"50.00"];
+    NSDecimalNumber *budget = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserBudget"];
+    if (!budget || ![budget isKindOfClass:[NSNumber class]]) {
+        return [NSDecimalNumber decimalNumberWithString:@"0.00"];
+    } else {
+        return [NSDecimalNumber decimalNumberWithString:[budget stringValue]];
+    }
 }
 
 - (void)expendColorExceedBudget:(BOOL)exceeded {

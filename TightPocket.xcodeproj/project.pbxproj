@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D08EA9D11BAB1A96002783AB /* BudgetValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D08EA9D01BAB1A96002783AB /* BudgetValidator.m */; };
 		D0995DA31B9CFB0F00078235 /* UIColor+FNR.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */; };
 		D0995DA71B9E0E7200078235 /* FNRLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995DA61B9E0E7200078235 /* FNRLabel.m */; };
 		D09DEEEE1B98C62D0033BCFF /* Expenditure.m in Sources */ = {isa = PBXBuildFile; fileRef = D09DEEED1B98C62D0033BCFF /* Expenditure.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D08EA9CF1BAB1A96002783AB /* BudgetValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetValidator.h; sourceTree = "<group>"; };
+		D08EA9D01BAB1A96002783AB /* BudgetValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetValidator.m; sourceTree = "<group>"; };
 		D0995DA01B9CFB0F00078235 /* UIColor+FNR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "UIColor+FNR.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "UIColor+FNR.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		D0995DA41B9CFB7700078235 /* TightPocket-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TightPocket-Prefix.pch"; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				D0B87C341B976DED00A49B42 /* NSDate+Extensions.m */,
 				D0995DA01B9CFB0F00078235 /* UIColor+FNR.h */,
 				D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */,
+				D08EA9CF1BAB1A96002783AB /* BudgetValidator.h */,
+				D08EA9D01BAB1A96002783AB /* BudgetValidator.m */,
 				D0995DA51B9E0E7200078235 /* FNRLabel.h */,
 				D0995DA61B9E0E7200078235 /* FNRLabel.m */,
 				D0CE975E1BA72E9B0094EEEF /* FNRTableCellProtocol.h */,
@@ -383,6 +388,7 @@
 				D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */,
 				D09DEEF71B99FE320033BCFF /* ExpenditureCategoryViewController.m in Sources */,
 				D0CE97681BAA2D990094EEEF /* WelcomeViewController.m in Sources */,
+				D08EA9D11BAB1A96002783AB /* BudgetValidator.m in Sources */,
 				D0D5E3B51B975D1C00EFD403 /* FNRViewController.m in Sources */,
 				D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */,
 				D0CE97531BA726E00094EEEF /* PersonalViewController.m in Sources */,
