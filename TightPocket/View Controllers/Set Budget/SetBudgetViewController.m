@@ -59,7 +59,6 @@
     [currencyLabel sizeToFit];
     CGRect spacedFrame = CGRectMake(0, 0, CGRectGetWidth(currencyLabel.frame) + 10, CGRectGetHeight(currencyLabel.frame));
     currencyLabel.frame = spacedFrame;
-    NSLog(@"NEW FRAME: %@", NSStringFromCGRect(currencyLabel.frame));
     
     [self.budgetTextField setLeftViewMode:UITextFieldViewModeAlways];
     [self.budgetTextField setLeftView:currencyLabel];

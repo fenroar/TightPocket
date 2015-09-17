@@ -7,6 +7,7 @@
 //
 
 #import "FNRViewController.h"
+@import Charts;
 
 @interface StatsViewController : FNRViewController
 

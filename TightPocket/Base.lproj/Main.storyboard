@@ -467,8 +467,54 @@
                     <view key="view" contentMode="scaleToFill" id="dNF-eX-Pjf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwH-80-dD2">
+                                <rect key="frame" x="22" y="86" width="556" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2G-mW-jnE" customClass="PieChartView" customModule="Charts">
+                                <rect key="frame" x="22" y="128" width="556" height="449.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yU6-U9-9nf">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="e7g-3n-8cu"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="N0w-0u-dSE"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZwH-80-dD2" firstAttribute="top" secondItem="yU6-U9-9nf" secondAttribute="bottom" constant="22" id="5dy-yu-J2P"/>
+                            <constraint firstItem="9E2-dO-KNi" firstAttribute="top" secondItem="w2G-mW-jnE" secondAttribute="bottom" constant="22" id="6EA-br-RKw"/>
+                            <constraint firstItem="w2G-mW-jnE" firstAttribute="top" secondItem="ZwH-80-dD2" secondAttribute="bottom" constant="22" id="93c-Dx-07r"/>
+                            <constraint firstItem="w2G-mW-jnE" firstAttribute="top" secondItem="yU6-U9-9nf" secondAttribute="bottom" constant="100" id="AHC-Nq-0oB"/>
+                            <constraint firstAttribute="trailing" secondItem="yU6-U9-9nf" secondAttribute="trailing" id="CV1-yQ-GuU"/>
+                            <constraint firstItem="yU6-U9-9nf" firstAttribute="top" secondItem="Bwc-dI-WmZ" secondAttribute="bottom" id="Kku-kU-ozo"/>
+                            <constraint firstAttribute="trailing" secondItem="w2G-mW-jnE" secondAttribute="trailing" constant="22" id="OQ3-rK-Ifl"/>
+                            <constraint firstAttribute="trailing" secondItem="ZwH-80-dD2" secondAttribute="trailing" constant="22" id="ehP-1j-TAB"/>
+                            <constraint firstItem="w2G-mW-jnE" firstAttribute="top" secondItem="Bwc-dI-WmZ" secondAttribute="bottom" constant="22" id="gcJ-p5-8Ar"/>
+                            <constraint firstItem="w2G-mW-jnE" firstAttribute="leading" secondItem="dNF-eX-Pjf" secondAttribute="leading" constant="22" id="hbr-3C-zyN"/>
+                            <constraint firstItem="yU6-U9-9nf" firstAttribute="leading" secondItem="dNF-eX-Pjf" secondAttribute="leading" id="oP1-5N-DBu"/>
+                            <constraint firstItem="ZwH-80-dD2" firstAttribute="leading" secondItem="dNF-eX-Pjf" secondAttribute="leading" constant="22" id="zMN-1K-ZWw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AHC-Nq-0oB"/>
+                                <exclude reference="gcJ-p5-8Ar"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="chartView" destination="w2G-mW-jnE" id="f5n-6W-Bhj"/>
+                        <outlet property="dateLabel" destination="ZwH-80-dD2" id="1Ff-aT-fEb"/>
+                        <outlet property="toolBar" destination="yU6-U9-9nf" id="7Cx-1B-JCE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ker-4S-POd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

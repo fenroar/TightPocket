@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F9D75825D80CEBF0C3460C3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 626B8DA8EB5FB1B6ACDA2A38 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D08EA9D11BAB1A96002783AB /* BudgetValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D08EA9D01BAB1A96002783AB /* BudgetValidator.m */; };
 		D08EA9D51BAB2348002783AB /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D08EA9D41BAB2348002783AB /* StatsViewController.m */; };
 		D0995DA31B9CFB0F00078235 /* UIColor+FNR.m in Sources */ = {isa = PBXBuildFile; fileRef = D0995DA11B9CFB0F00078235 /* UIColor+FNR.m */; };
@@ -46,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		046322EEC47592D391EF7BA3 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		626B8DA8EB5FB1B6ACDA2A38 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		629B6815D5EAA4A11AE620B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		D08EA9CF1BAB1A96002783AB /* BudgetValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BudgetValidator.h; sourceTree = "<group>"; };
 		D08EA9D01BAB1A96002783AB /* BudgetValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BudgetValidator.m; sourceTree = "<group>"; };
 		D08EA9D31BAB2348002783AB /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9D75825D80CEBF0C3460C3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +122,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9949F3A0C2597F08B5E9BC5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				626B8DA8EB5FB1B6ACDA2A38 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B00A514B84ABD559D5A00BF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				629B6815D5EAA4A11AE620B2 /* Pods.debug.xcconfig */,
+				046322EEC47592D391EF7BA3 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D08EA9D21BAB233D002783AB /* Stats */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +201,8 @@
 				D0D5E3741B975A6200EFD403 /* TightPocket */,
 				D0D5E3911B975A6200EFD403 /* TightPocketTests */,
 				D0D5E3731B975A6200EFD403 /* Products */,
+				B00A514B84ABD559D5A00BF2 /* Pods */,
+				9949F3A0C2597F08B5E9BC5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,9 +325,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0D5E3981B975A6200EFD403 /* Build configuration list for PBXNativeTarget "TightPocket" */;
 			buildPhases = (
+				9C49A7A95DE70A0E9D833AD7 /* Check Pods Manifest.lock */,
 				D0D5E36E1B975A6200EFD403 /* Sources */,
 				D0D5E36F1B975A6200EFD403 /* Frameworks */,
 				D0D5E3701B975A6200EFD403 /* Resources */,
+				215C503ECF52DEC989040C5D /* Embed Pods Frameworks */,
+				DC0B3E9C03496988C0AB395B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -390,6 +417,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		215C503ECF52DEC989040C5D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C49A7A95DE70A0E9D833AD7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC0B3E9C03496988C0AB395B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0D5E36E1B975A6200EFD403 /* Sources */ = {
@@ -540,10 +615,12 @@
 		};
 		D0D5E3991B975A6200EFD403 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 629B6815D5EAA4A11AE620B2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREFIX_HEADER = "TightPocket/TightPocket-Prefix.pch";
 				INFOPLIST_FILE = TightPocket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -555,10 +632,12 @@
 		};
 		D0D5E39A1B975A6200EFD403 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 046322EEC47592D391EF7BA3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PREFIX_HEADER = "TightPocket/TightPocket-Prefix.pch";
 				INFOPLIST_FILE = TightPocket/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

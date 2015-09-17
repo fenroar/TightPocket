@@ -90,7 +90,7 @@ static NSString * const CategoryCellIdentifier = @"CategoryCell";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma UIToolbarDelegate
+#pragma mark - UIToolbarDelegate
 
 - (UIBarPosition)positionForBar:(id<UIBarPositioning>)bar {
     return UIBarPositionTopAttached;
