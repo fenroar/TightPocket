@@ -20,6 +20,7 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
+- (UITabBarController *)initialTabBarController;
 
 @end
 

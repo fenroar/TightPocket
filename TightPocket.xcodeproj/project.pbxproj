@@ -22,6 +22,7 @@
 		D0CE975B1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE975A1BA72E6C0094EEEF /* PersonalMenuTableViewCell.m */; };
 		D0CE975D1BA72E780094EEEF /* PersonalMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0CE975C1BA72E780094EEEF /* PersonalMenuCell.xib */; };
 		D0CE97651BAA23450094EEEF /* SetBudgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE97641BAA23450094EEEF /* SetBudgetViewController.m */; };
+		D0CE97681BAA2D990094EEEF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0CE97671BAA2D990094EEEF /* WelcomeViewController.m */; };
 		D0D5E3781B975A6200EFD403 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E3771B975A6200EFD403 /* main.m */; };
 		D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37A1B975A6200EFD403 /* AppDelegate.m */; };
 		D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D0D5E37C1B975A6200EFD403 /* TightPocket.xcdatamodeld */; };
@@ -74,6 +75,8 @@
 		D0CE975E1BA72E9B0094EEEF /* FNRTableCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNRTableCellProtocol.h; sourceTree = "<group>"; };
 		D0CE97631BAA23450094EEEF /* SetBudgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetBudgetViewController.h; sourceTree = "<group>"; };
 		D0CE97641BAA23450094EEEF /* SetBudgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetBudgetViewController.m; sourceTree = "<group>"; };
+		D0CE97661BAA2D990094EEEF /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		D0CE97671BAA2D990094EEEF /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		D0D5E3721B975A6200EFD403 /* TightPocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TightPocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D5E3761B975A6200EFD403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0D5E3771B975A6200EFD403 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 				D0D5E3B01B975CF200EFD403 /* Set Category */,
 				D0D5E3B31B975D1C00EFD403 /* FNRViewController.h */,
 				D0D5E3B41B975D1C00EFD403 /* FNRViewController.m */,
+				D0CE97661BAA2D990094EEEF /* WelcomeViewController.h */,
+				D0CE97671BAA2D990094EEEF /* WelcomeViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				D0D5E37E1B975A6200EFD403 /* TightPocket.xcdatamodeld in Sources */,
 				D0B87C281B975DCA00A49B42 /* MainViewController.m in Sources */,
 				D09DEEF71B99FE320033BCFF /* ExpenditureCategoryViewController.m in Sources */,
+				D0CE97681BAA2D990094EEEF /* WelcomeViewController.m in Sources */,
 				D0D5E3B51B975D1C00EFD403 /* FNRViewController.m in Sources */,
 				D0D5E37B1B975A6200EFD403 /* AppDelegate.m in Sources */,
 				D0CE97531BA726E00094EEEF /* PersonalViewController.m in Sources */,

@@ -23,7 +23,18 @@
     [self setAppearance];
     [self clearOldData];
     
-    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+// TODO: Implement the welcome view controller
+    self.window.rootViewController = (YES) ? [self initialTabBarController] : [self welcomeViewController];
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+}
+
+- (UITabBarController *)initialTabBarController {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+
+    UITabBarController *tabBarController = (UITabBarController *)[storyboard instantiateViewControllerWithIdentifier:@"TabVC"];
     tabBarController.delegate = self;
     for (FNRViewController *vc in tabBarController.viewControllers) {
         if ([vc isKindOfClass:[FNRViewController class]]) {
@@ -32,8 +43,14 @@
             NSAssert(false, @"Failed to set managed object context for root view controller");
         }
     }
+    return tabBarController;
+}
+
+- (UIViewController *)welcomeViewController {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIViewController *welcomeVC = [storyboard instantiateViewControllerWithIdentifier:@"TestVC"];
     
-    return YES;
+    return welcomeVC;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
